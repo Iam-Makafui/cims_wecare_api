@@ -10,7 +10,7 @@ class Role:
         cursor.close()
         return roles
     
-    # method to fetch a roles
+    # method to fetch a role
     @staticmethod
     def get_role_by_id(role_id):
         cursor = mysql.connection.cursor()
