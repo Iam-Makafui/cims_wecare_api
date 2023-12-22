@@ -6,19 +6,19 @@ users_blueprint = Blueprint('users', __name__)
 # route to fetch all roles
 @users_blueprint.route('/users', methods=['GET'])
 def get_users():
-    roles = UsersController.get_all_users()
+    users = UsersController.get_all_users()
     
     formatted_users = []
-    for role in roles:
+    for user in users:
         formatted_users.append({
-            'id': role[0],
-            'username': role[1],
-            'email': role[2],
-            'status': role[3],
-            'role_id': role[4],
-            'role_name': role[5],
-            'created_at': role[6],
-            'user_image': role[7]
+            'id': user[0],
+            'username': user[1],
+            'email': user[2],
+            'status': user[3],
+            'role_id': user[4],
+            'role_name': user[5],
+            'created_at': user[6],
+            'user_image': user[7]
         })
     
     return jsonify({'users': formatted_users})

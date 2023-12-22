@@ -1,6 +1,7 @@
 from flask import Flask
 from app.routes.roles_route import roles_blueprint
 from app.routes.users_route import users_blueprint
+from app.routes.members_route import members_blueprint
 from app.auth_middleware import register_middleware
 from app.db import mysql  # Import the MySQL instance
 
@@ -22,6 +23,8 @@ def create_app():
     app.register_blueprint(roles_blueprint)
     #user blueprint
     app.register_blueprint(users_blueprint)
+    #members blueprint
+    app.register_blueprint(members_blueprint)
     
     register_middleware(app)
 
