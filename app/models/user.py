@@ -7,7 +7,7 @@ class User:
         with mysql.connection.cursor() as cursor:
             cursor.execute("""
                 SELECT 
-                    users.id, users.username, users.email, users.status, roles.id, roles.role_name, users.created_at, users.user_image
+                    users.id, users.firstname, users.lastname, users.username, users.email, users.status, roles.id, roles.role_name, users.created_at, users.user_image
                 FROM 
                     users 
                 INNER JOIN 
@@ -21,14 +21,14 @@ class User:
     
     # method to add a user
     @staticmethod
-    def add_user(username, password, email, status, role_id, user_image):
+    def add_user(firstname, lastname, username, password, email, status, role_id, user_image):
         try:
             cursor = mysql.connection.cursor()
-            cursor.execute("INSERT INTO users (username, password, email, status, role_id, user_image) VALUES (%s, %s, %s, %s, %s, %s)",
-                           (username, password, email, status, role_id, user_image,))
+            cursor.execute("INSERT INTO users (firstname, lastname, username, password, email, status, role_id, user_image) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)",
+                           (firstname, lastname, username, password, email, status, role_id, user_image,))
             mysql.connection.commit()
             cursor.close()
-            return {'username': username, 'email': email, 'status': status, 'image': user_image}
+            return {'first_name': firstname, 'last_name': lastname, 'username': username, 'email': email, 'status': status, 'image': user_image}
         except Exception as e:
             print(e)  # Handle the exception according to your application's error handling
             return None
@@ -36,14 +36,14 @@ class User:
         
     # method to update a user profile details
     @staticmethod
-    def update_user(user_id, username, email, status, role_id, user_image):
+    def update_user(user_id, firstname, lastname, username, email, status, role_id, user_image):
         try:
             cursor = mysql.connection.cursor()
-            cursor.execute("UPDATE users SET username = %s, email = %s, status = %s, role_id = %s, user_image = %s WHERE id = %s", 
-                           (username, email, status, role_id, user_image, user_id,))
+            cursor.execute("UPDATE users SET firstname = %s, lastname = %s, username = %s, email = %s, status = %s, role_id = %s, user_image = %s WHERE id = %s", 
+                           (firstname, lastname, username, email, status, role_id, user_image, user_id,))
             mysql.connection.commit()
             cursor.close()
-            return {'username': username, 'email': email, 'status': status, 'user_image': user_image}
+            return {'first_name': firstname, 'last_name': lastname, 'username': username, 'email': email, 'status': status, 'user_image': user_image}
         except Exception as e:
             print(e)  # Handle the exception according to your application's error handling
             return None
@@ -84,7 +84,7 @@ class User:
         with mysql.connection.cursor() as cursor:
             cursor.execute("""
                 SELECT 
-                    users.id, users.username, users.email, users.status, roles.id, roles.role_name, users.created_at, users.user_image
+                    users.id, users.firstname, users.lastname, users.username, users.email, users.status, roles.id, roles.role_name, users.created_at, users.user_image
                 FROM 
                     users
                 INNER JOIN 

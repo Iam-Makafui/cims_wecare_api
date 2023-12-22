@@ -12,13 +12,15 @@ def get_users():
     for user in users:
         formatted_users.append({
             'id': user[0],
-            'username': user[1],
-            'email': user[2],
-            'status': user[3],
-            'role_id': user[4],
-            'role_name': user[5],
-            'created_at': user[6],
-            'user_image': user[7]
+            'firstname': user[1],
+            'lastname': user[2],
+            'username': user[3],
+            'email': user[4],
+            'status': user[5],
+            'role_id': user[6],
+            'role_name': user[7],
+            'created_at': user[8],
+            'user_image': user[9]
         })
     
     return jsonify({'users': formatted_users})
@@ -27,13 +29,15 @@ def get_users():
 # New route to add a user
 @users_blueprint.route('/users', methods=['POST'])
 def add_user():
-    required_fields = ['username', 'password', 'email', 'status', 'role_id', 'user_image']
+    required_fields = ['first_name', 'last_name', 'username', 'password', 'email', 'status', 'role_id', 'user_image']
     data = request.json
     missing_fields = [field for field in required_fields if field not in data]
     if missing_fields:
         error_message = f"Missing fields: {', '.join(missing_fields)}"
         return jsonify({'error': error_message, 'status_code': 400}), 400
     
+    first_name = data['first_name']
+    last_name = data['last_name']
     username = data['username']
     password = data['password']
     email = data['email']
@@ -42,7 +46,7 @@ def add_user():
     user_image = data['user_image']
 
     # Call controller method to add user
-    new_user = UsersController.add_user(username, password, email, status, role_id, user_image)
+    new_user = UsersController.add_user(first_name, last_name, username, password, email, status, role_id, user_image)
     
     if new_user:
         return jsonify({'message': 'User added successfully', 'user': new_user, 'status_code': 200}), 200
@@ -53,13 +57,15 @@ def add_user():
 # New route to update a user profile details
 @users_blueprint.route('/users/profile', methods=['PATCH'])
 def update_user():
-    required_fields = ['username', 'user_id', 'email', 'status', 'role_id', 'user_image']
+    required_fields = ['first_name', 'last_name', 'username', 'user_id', 'email', 'status', 'role_id', 'user_image']
     data = request.json
     missing_fields = [field for field in required_fields if field not in data]
     if missing_fields:
         error_message = f"Missing fields: {', '.join(missing_fields)}"
         return jsonify({'error': error_message, 'status_code': 400}), 400
     
+    first_name = data['first_name']
+    last_name = data['last_name']
     username = data['username']
     user_id = data['user_id']
     email = data['email']
@@ -68,7 +74,7 @@ def update_user():
     user_image = data['user_image']
 
     # Call controller method to update user profile details
-    update_user = UsersController.update_user(user_id, username, email, status, role_id, user_image)
+    update_user = UsersController.update_user(user_id, first_name, last_name, username, email, status, role_id, user_image)
     
     if update_user:
         return jsonify({'message': 'User Profile Updated Successfully', 'user': update_user, 'status_code': 200}), 200
@@ -116,6 +122,6 @@ def delete_user_by_id(user_id):
 def get_user_by_id(user_id):
     user = UsersController.get_user_by_id(user_id)
     if user:
-        return jsonify({'user': {'id': user[0], 'username': user[1], 'email': user[2], 'status': user[3], 'role_id': user[4], 'role_name': user[5], 'created_at': user[6], 'user_image': user[7]} })
+        return jsonify({'user': {'id': user[0], 'firstname': user[1], 'lastname': user[2], 'username': user[3], 'email': user[4], 'status': user[5], 'role_id': user[6], 'role_name': user[7], 'created_at': user[8], 'user_image': user[9]} })
     else:
         return jsonify({'error': 'User not found', 'status_code': 404}), 404

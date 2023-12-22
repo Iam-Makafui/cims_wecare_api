@@ -14,14 +14,14 @@ class UsersController:
     
     # New method to add a user
     @staticmethod
-    def add_user(username, password, email, status, role_id, user_image):
+    def add_user(firstname, lastname, username, password, email, status, role_id, user_image):
         hashed_password = UsersController.hash_password(password)
-        return User.add_user(username, hashed_password, email, status, role_id, user_image)
+        return User.add_user(firstname, lastname, username, hashed_password, email, status, role_id, user_image)
     
     # New method to update a user
     @staticmethod
-    def update_user(user_id, username, email, status, role_id, user_image):
-        return User.update_user(user_id, username, email, status, role_id, user_image)
+    def update_user(user_id, firstname, lastname, username, email, status, role_id, user_image):
+        return User.update_user(user_id, firstname, lastname, username, email, status, role_id, user_image)
     
     
     # New method to update a user account
