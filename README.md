@@ -50,7 +50,7 @@ The Welfare Management System API is a comprehensive system designed to manage w
 
 4. Database Setup:
     - Create a MySQL database named `welfare_management_system_dev`.
-    - Configure the database connection in `db.py`.
+    - Configure the database connection in `__init__.py` in the app folder.
 
 ### Running the API
 
