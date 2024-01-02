@@ -7,6 +7,8 @@ from app.routes.cases_route import cases_blueprint
 from app.routes.contributions_route import contributions_blueprint
 from app.routes.dues_route import dues_blueprint
 from app.routes.chatbot_route import bot_blueprint
+from app.routes.expense_types_route import expense_types_blueprint
+from app.routes.expenses_routes import expenses_blueprint
 from app.auth_middleware import register_middleware
 from app.db import mysql  # Import the MySQL instance
 
@@ -40,6 +42,10 @@ def create_app():
     app.register_blueprint(dues_blueprint)
     #bot blueprint
     app.register_blueprint(bot_blueprint)
+    #expense types blueprint
+    app.register_blueprint(expense_types_blueprint)
+    #expense blueprint
+    app.register_blueprint(expenses_blueprint)
     
     register_middleware(app)
 
