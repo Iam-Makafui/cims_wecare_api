@@ -43,6 +43,7 @@ class Expenses:
         return expense
     
     
+    
     # method to add an expense
     @staticmethod
     def add_expense(expense_type_id, description, amount, date, user_id):
