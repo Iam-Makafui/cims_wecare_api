@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\User\Documents\sandbox\welfare_management_software_api\welfare_management_system_api_virtual
+set VIRTUAL_ENV=C:\Users\jcann\Documents\churchprojects\welfare_management_software_api\welfare_management_system_api_virtual
 
 if not defined PROMPT set PROMPT=$P$G
 

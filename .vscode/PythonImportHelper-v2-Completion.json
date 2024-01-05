@@ -1,0 +1,205 @@
+[
+    {
+        "label": "Role",
+        "importPath": "app.models.role",
+        "description": "app.models.role",
+        "isExtraImport": true,
+        "detail": "app.models.role",
+        "documentation": {}
+    },
+    {
+        "label": "mysql",
+        "importPath": "app.db",
+        "description": "app.db",
+        "isExtraImport": true,
+        "detail": "app.db",
+        "documentation": {}
+    },
+    {
+        "label": "mysql",
+        "importPath": "app.db",
+        "description": "app.db",
+        "isExtraImport": true,
+        "detail": "app.db",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "RolesController",
+        "importPath": "app.controllers.roles_controller",
+        "description": "app.controllers.roles_controller",
+        "isExtraImport": true,
+        "detail": "app.controllers.roles_controller",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "MySQL",
+        "importPath": "flask_mysqldb",
+        "description": "flask_mysqldb",
+        "isExtraImport": true,
+        "detail": "flask_mysqldb",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "app",
+        "description": "app",
+        "isExtraImport": true,
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "RolesController",
+        "kind": 6,
+        "importPath": "app.controllers.roles_controller",
+        "description": "app.controllers.roles_controller",
+        "peekOfCode": "class RolesController:\n    # New method to fetch all roles\n    @staticmethod\n    def get_all_roles():\n        return Role.get_all_roles()\n    # New method to fetch a role\n    @staticmethod\n    def get_role_by_id(role_id):\n        return Role.get_role_by_id(role_id)\n    # New method to add a role",
+        "detail": "app.controllers.roles_controller",
+        "documentation": {}
+    },
+    {
+        "label": "Role",
+        "kind": 6,
+        "importPath": "app.models.role",
+        "description": "app.models.role",
+        "peekOfCode": "class Role:\n    # method to fetch all roles\n    @staticmethod\n    def get_all_roles():\n        cursor = mysql.connection.cursor()\n        cursor.execute(\"SELECT * FROM roles\")\n        roles = cursor.fetchall()\n        cursor.close()\n        return roles\n    # method to fetch a roles",
+        "detail": "app.models.role",
+        "documentation": {}
+    },
+    {
+        "label": "get_roles",
+        "kind": 2,
+        "importPath": "app.routes.roles_management",
+        "description": "app.routes.roles_management",
+        "peekOfCode": "def get_roles():\n    roles = RolesController.get_all_roles()\n    formatted_roles = []\n    for role in roles:\n        formatted_roles.append({\n            'id': role[0],\n            'role_name': role[1],\n            'inserted_at': role[2],\n            'updated_at': role[3]\n        })",
+        "detail": "app.routes.roles_management",
+        "documentation": {}
+    },
+    {
+        "label": "get_role_by_id",
+        "kind": 2,
+        "importPath": "app.routes.roles_management",
+        "description": "app.routes.roles_management",
+        "peekOfCode": "def get_role_by_id(role_id):\n    role = RolesController.get_role_by_id(role_id)\n    if role:\n        return jsonify({'role': {'id': role[0], 'role_name': role[1], 'inserted_at': role[2], 'updated_at': role[3]} })\n    else:\n        return jsonify({'error': 'Role not found', 'status_code': 404}), 404\n# New route to add a role\n@roles_blueprint.route('/roles', methods=['POST'])\ndef add_role():\n    role_name = request.json.get('role_name')",
+        "detail": "app.routes.roles_management",
+        "documentation": {}
+    },
+    {
+        "label": "add_role",
+        "kind": 2,
+        "importPath": "app.routes.roles_management",
+        "description": "app.routes.roles_management",
+        "peekOfCode": "def add_role():\n    role_name = request.json.get('role_name')\n    if not role_name:\n        return jsonify({'error': 'Role name is required', 'status_code': 400}), 400\n    # Call controller method to add role\n    new_role = RolesController.add_role(role_name)\n    if new_role:\n        return jsonify({'message': 'Role added successfully', 'role': new_role, 'status_code': 200}), 200\n    else:\n        return jsonify({'error': 'Failed to add role', 'status_code': 500}), 500",
+        "detail": "app.routes.roles_management",
+        "documentation": {}
+    },
+    {
+        "label": "update_role_by_id",
+        "kind": 2,
+        "importPath": "app.routes.roles_management",
+        "description": "app.routes.roles_management",
+        "peekOfCode": "def update_role_by_id(role_id):\n    new_role_name = request.json.get('role_name')\n    if not new_role_name:\n        return jsonify({'error': 'New role name is required', 'status_code': 400}), 400\n    updated_role = RolesController.update_role(role_id, new_role_name)\n    if updated_role:\n        return jsonify({'message': f'Role with ID {role_id} updated successfully', 'role': updated_role, 'status_code': 200}), 200\n    else:\n        return jsonify({'error': f'Failed to update role with ID {role_id}', 'status_code': 500}), 500\n# New route to delete a role",
+        "detail": "app.routes.roles_management",
+        "documentation": {}
+    },
+    {
+        "label": "delete_role_by_id",
+        "kind": 2,
+        "importPath": "app.routes.roles_management",
+        "description": "app.routes.roles_management",
+        "peekOfCode": "def delete_role_by_id(role_id):\n    deleted_role = RolesController.delete_role(role_id)\n    if deleted_role:\n        return jsonify({'message': f'Role with ID {role_id} deleted successfully', 'status_code': 200}), 200\n    else:\n        return jsonify({'error': f'Failed to delete role with ID {role_id}', 'status_code': 500}), 500",
+        "detail": "app.routes.roles_management",
+        "documentation": {}
+    },
+    {
+        "label": "roles_blueprint",
+        "kind": 5,
+        "importPath": "app.routes.roles_management",
+        "description": "app.routes.roles_management",
+        "peekOfCode": "roles_blueprint = Blueprint('roles', __name__)\n# route to fetch all roles\n@roles_blueprint.route('/roles', methods=['GET'])\ndef get_roles():\n    roles = RolesController.get_all_roles()\n    formatted_roles = []\n    for role in roles:\n        formatted_roles.append({\n            'id': role[0],\n            'role_name': role[1],",
+        "detail": "app.routes.roles_management",
+        "documentation": {}
+    },
+    {
+        "label": "check_token",
+        "kind": 2,
+        "importPath": "app.auth_middleware",
+        "description": "app.auth_middleware",
+        "peekOfCode": "def check_token():\n    token = request.headers.get('User-Token')\n    if not token:\n        return jsonify({'error': 'Unauthorized Request', 'status_code': 401}), 401\n    cursor = mysql.connection.cursor()\n    cursor.execute(\"SELECT * FROM api_tokens WHERE token = %s\", (token,))\n    token_data = cursor.fetchone()\n    if not token_data:\n        cursor.close()\n        return jsonify({'error': 'Invalid Authentication Token', 'status_code': 401}), 401",
+        "detail": "app.auth_middleware",
+        "documentation": {}
+    },
+    {
+        "label": "register_middleware",
+        "kind": 2,
+        "importPath": "app.auth_middleware",
+        "description": "app.auth_middleware",
+        "peekOfCode": "def register_middleware(app):\n    @app.before_request\n    def before_request():\n        result = check_token()\n        if result:\n            return result  # Return error response if authorization fails",
+        "detail": "app.auth_middleware",
+        "documentation": {}
+    },
+    {
+        "label": "mysql",
+        "kind": 5,
+        "importPath": "app.db",
+        "description": "app.db",
+        "peekOfCode": "mysql = MySQL()",
+        "detail": "app.db",
+        "documentation": {}
+    }
+]
