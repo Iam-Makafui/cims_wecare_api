@@ -1,5 +1,14 @@
 from flask import Flask
-from app.routes.roles_management import roles_blueprint
+from app.routes.roles_route import roles_blueprint
+from app.routes.users_route import users_blueprint
+from app.routes.members_route import members_blueprint
+from app.routes.case_types_route import case_types_blueprint
+from app.routes.cases_route import cases_blueprint
+from app.routes.contributions_route import contributions_blueprint
+from app.routes.dues_route import dues_blueprint
+from app.routes.chatbot_route import bot_blueprint
+from app.routes.expense_types_route import expense_types_blueprint
+from app.routes.expenses_routes import expenses_blueprint
 from app.auth_middleware import register_middleware
 from app.db import mysql  # Import the MySQL instance
 
@@ -16,7 +25,28 @@ def create_app():
     mysql.init_app(app)
 
     # Register blueprints, middleware, etc.
+    
+    #roles blueprint
     app.register_blueprint(roles_blueprint)
+    #user blueprint
+    app.register_blueprint(users_blueprint)
+    #members blueprint
+    app.register_blueprint(members_blueprint)
+    #case type blueprint
+    app.register_blueprint(case_types_blueprint)
+    #cases blueprint
+    app.register_blueprint(cases_blueprint)
+    #case contribution blueprint
+    app.register_blueprint(contributions_blueprint)
+    #dues blueprint
+    app.register_blueprint(dues_blueprint)
+    #bot blueprint
+    app.register_blueprint(bot_blueprint)
+    #expense types blueprint
+    app.register_blueprint(expense_types_blueprint)
+    #expense blueprint
+    app.register_blueprint(expenses_blueprint)
+    
     register_middleware(app)
 
     return app
