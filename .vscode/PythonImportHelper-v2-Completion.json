@@ -1,0 +1,1336 @@
+[
+    {
+        "label": "Cases",
+        "importPath": "app.models.cases",
+        "description": "app.models.cases",
+        "isExtraImport": true,
+        "detail": "app.models.cases",
+        "documentation": {}
+    },
+    {
+        "label": "CaseType",
+        "importPath": "app.models.case_type",
+        "description": "app.models.case_type",
+        "isExtraImport": true,
+        "detail": "app.models.case_type",
+        "documentation": {}
+    },
+    {
+        "label": "Contribution",
+        "importPath": "app.models.contributions",
+        "description": "app.models.contributions",
+        "isExtraImport": true,
+        "detail": "app.models.contributions",
+        "documentation": {}
+    },
+    {
+        "label": "Due",
+        "importPath": "app.models.dues",
+        "description": "app.models.dues",
+        "isExtraImport": true,
+        "detail": "app.models.dues",
+        "documentation": {}
+    },
+    {
+        "label": "Expenses",
+        "importPath": "app.models.expense",
+        "description": "app.models.expense",
+        "isExtraImport": true,
+        "detail": "app.models.expense",
+        "documentation": {}
+    },
+    {
+        "label": "ExpenseType",
+        "importPath": "app.models.expense_type",
+        "description": "app.models.expense_type",
+        "isExtraImport": true,
+        "detail": "app.models.expense_type",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "app.models.members",
+        "description": "app.models.members",
+        "isExtraImport": true,
+        "detail": "app.models.members",
+        "documentation": {}
+    },
+    {
+        "label": "hashlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "hashlib",
+        "description": "hashlib",
+        "detail": "hashlib",
+        "documentation": {}
+    },
+    {
+        "label": "Role",
+        "importPath": "app.models.role",
+        "description": "app.models.role",
+        "isExtraImport": true,
+        "detail": "app.models.role",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "app.models.user",
+        "description": "app.models.user",
+        "isExtraImport": true,
+        "detail": "app.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "mysql",
+        "importPath": "app.db",
+        "description": "app.db",
+        "isExtraImport": true,
+        "detail": "app.db",
+        "documentation": {}
+    },
+    {
+        "label": "mysql",
+        "importPath": "app.db",
+        "description": "app.db",
+        "isExtraImport": true,
+        "detail": "app.db",
+        "documentation": {}
+    },
+    {
+        "label": "mysql",
+        "importPath": "app.db",
+        "description": "app.db",
+        "isExtraImport": true,
+        "detail": "app.db",
+        "documentation": {}
+    },
+    {
+        "label": "mysql",
+        "importPath": "app.db",
+        "description": "app.db",
+        "isExtraImport": true,
+        "detail": "app.db",
+        "documentation": {}
+    },
+    {
+        "label": "mysql",
+        "importPath": "app.db",
+        "description": "app.db",
+        "isExtraImport": true,
+        "detail": "app.db",
+        "documentation": {}
+    },
+    {
+        "label": "mysql",
+        "importPath": "app.db",
+        "description": "app.db",
+        "isExtraImport": true,
+        "detail": "app.db",
+        "documentation": {}
+    },
+    {
+        "label": "mysql",
+        "importPath": "app.db",
+        "description": "app.db",
+        "isExtraImport": true,
+        "detail": "app.db",
+        "documentation": {}
+    },
+    {
+        "label": "mysql",
+        "importPath": "app.db",
+        "description": "app.db",
+        "isExtraImport": true,
+        "detail": "app.db",
+        "documentation": {}
+    },
+    {
+        "label": "mysql",
+        "importPath": "app.db",
+        "description": "app.db",
+        "isExtraImport": true,
+        "detail": "app.db",
+        "documentation": {}
+    },
+    {
+        "label": "mysql",
+        "importPath": "app.db",
+        "description": "app.db",
+        "isExtraImport": true,
+        "detail": "app.db",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "CasesController",
+        "importPath": "app.controllers.cases_controller",
+        "description": "app.controllers.cases_controller",
+        "isExtraImport": true,
+        "detail": "app.controllers.cases_controller",
+        "documentation": {}
+    },
+    {
+        "label": "CaseTypesController",
+        "importPath": "app.controllers.case_types_controller",
+        "description": "app.controllers.case_types_controller",
+        "isExtraImport": true,
+        "detail": "app.controllers.case_types_controller",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "mysql.connector",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "mysql.connector",
+        "description": "mysql.connector",
+        "detail": "mysql.connector",
+        "documentation": {}
+    },
+    {
+        "label": "create_sql_agent",
+        "importPath": "langchain.agents",
+        "description": "langchain.agents",
+        "isExtraImport": true,
+        "detail": "langchain.agents",
+        "documentation": {}
+    },
+    {
+        "label": "AgentExecutor",
+        "importPath": "langchain.agents",
+        "description": "langchain.agents",
+        "isExtraImport": true,
+        "detail": "langchain.agents",
+        "documentation": {}
+    },
+    {
+        "label": "SQLDatabaseToolkit",
+        "importPath": "langchain.agents.agent_toolkits",
+        "description": "langchain.agents.agent_toolkits",
+        "isExtraImport": true,
+        "detail": "langchain.agents.agent_toolkits",
+        "documentation": {}
+    },
+    {
+        "label": "SQLDatabase",
+        "importPath": "langchain.sql_database",
+        "description": "langchain.sql_database",
+        "isExtraImport": true,
+        "detail": "langchain.sql_database",
+        "documentation": {}
+    },
+    {
+        "label": "OpenAI",
+        "importPath": "langchain.llms.openai",
+        "description": "langchain.llms.openai",
+        "isExtraImport": true,
+        "detail": "langchain.llms.openai",
+        "documentation": {}
+    },
+    {
+        "label": "ContributionsController",
+        "importPath": "app.controllers.contributions_controller",
+        "description": "app.controllers.contributions_controller",
+        "isExtraImport": true,
+        "detail": "app.controllers.contributions_controller",
+        "documentation": {}
+    },
+    {
+        "label": "DuesController",
+        "importPath": "app.controllers.dues_controller",
+        "description": "app.controllers.dues_controller",
+        "isExtraImport": true,
+        "detail": "app.controllers.dues_controller",
+        "documentation": {}
+    },
+    {
+        "label": "ExpensesController",
+        "importPath": "app.controllers.expenses_controller",
+        "description": "app.controllers.expenses_controller",
+        "isExtraImport": true,
+        "detail": "app.controllers.expenses_controller",
+        "documentation": {}
+    },
+    {
+        "label": "ExpenseTypesController",
+        "importPath": "app.controllers.expense_types_controller",
+        "description": "app.controllers.expense_types_controller",
+        "isExtraImport": true,
+        "detail": "app.controllers.expense_types_controller",
+        "documentation": {}
+    },
+    {
+        "label": "MembersController",
+        "importPath": "app.controllers.members_controller",
+        "description": "app.controllers.members_controller",
+        "isExtraImport": true,
+        "detail": "app.controllers.members_controller",
+        "documentation": {}
+    },
+    {
+        "label": "RolesController",
+        "importPath": "app.controllers.roles_controller",
+        "description": "app.controllers.roles_controller",
+        "isExtraImport": true,
+        "detail": "app.controllers.roles_controller",
+        "documentation": {}
+    },
+    {
+        "label": "UsersController",
+        "importPath": "app.controllers.users_controller",
+        "description": "app.controllers.users_controller",
+        "isExtraImport": true,
+        "detail": "app.controllers.users_controller",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "MySQL",
+        "importPath": "flask_mysqldb",
+        "description": "flask_mysqldb",
+        "isExtraImport": true,
+        "detail": "flask_mysqldb",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "app",
+        "description": "app",
+        "isExtraImport": true,
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "CasesController",
+        "kind": 6,
+        "importPath": "app.controllers.cases_controller",
+        "description": "app.controllers.cases_controller",
+        "peekOfCode": "class CasesController:\n    # New method to fetch all cases\n    @staticmethod\n    def get_all_cases():\n        return Cases.get_all_cases()\n    # New method to fetch a case\n    @staticmethod\n    def get_case_by_id(case_id):\n        return Cases.get_a_case(case_id)\n    # New method to add a case",
+        "detail": "app.controllers.cases_controller",
+        "documentation": {}
+    },
+    {
+        "label": "CaseTypesController",
+        "kind": 6,
+        "importPath": "app.controllers.case_types_controller",
+        "description": "app.controllers.case_types_controller",
+        "peekOfCode": "class CaseTypesController:\n    # New method to fetch all case types\n    @staticmethod\n    def get_all_case_types():\n        return CaseType.get_all_case_types()\n    # New method to fetch a case type\n    @staticmethod\n    def get_case_type_by_id(case_type_id):\n        return CaseType.get_case_type_by_id(case_type_id)\n    # New method to add a case type",
+        "detail": "app.controllers.case_types_controller",
+        "documentation": {}
+    },
+    {
+        "label": "ContributionsController",
+        "kind": 6,
+        "importPath": "app.controllers.contributions_controller",
+        "description": "app.controllers.contributions_controller",
+        "peekOfCode": "class ContributionsController:\n    # New method to fetch all case contributions\n    @staticmethod\n    def get_all_case_contributions():\n        return Contribution.get_all_case_contributions()\n    # New method to fetch a case contribution\n    @staticmethod\n    def get_case_contribution_by_id(contribution_id):\n        return Contribution.get_a_case_contribution(contribution_id)\n    # New method to add a case contribution",
+        "detail": "app.controllers.contributions_controller",
+        "documentation": {}
+    },
+    {
+        "label": "DuesController",
+        "kind": 6,
+        "importPath": "app.controllers.dues_controller",
+        "description": "app.controllers.dues_controller",
+        "peekOfCode": "class DuesController:\n    # New method to fetch all dues\n    @staticmethod\n    def get_all_dues():\n        return Due.get_all_dues()\n    # New method to fetch a due\n    @staticmethod\n    def get_due_by_id(due_id):\n        return Due.get_a_due(due_id)\n    # New method to add a due",
+        "detail": "app.controllers.dues_controller",
+        "documentation": {}
+    },
+    {
+        "label": "ExpensesController",
+        "kind": 6,
+        "importPath": "app.controllers.expenses_controller",
+        "description": "app.controllers.expenses_controller",
+        "peekOfCode": "class ExpensesController:\n    # New method to fetch all expenses\n    @staticmethod\n    def get_all_expenses():\n        return Expenses.get_all_expenses()\n    # New method to fetch an expense\n    @staticmethod\n    def get_expense_by_id(expense_id):\n        return Expenses.get_an_expense(expense_id)\n    # New method to add an expense",
+        "detail": "app.controllers.expenses_controller",
+        "documentation": {}
+    },
+    {
+        "label": "ExpenseTypesController",
+        "kind": 6,
+        "importPath": "app.controllers.expense_types_controller",
+        "description": "app.controllers.expense_types_controller",
+        "peekOfCode": "class ExpenseTypesController:\n    # New method to fetch all expense types\n    @staticmethod\n    def get_all_expense_types():\n        return ExpenseType.get_all_expense_types()\n    # New method to fetch a expense type\n    @staticmethod\n    def get_expense_type_by_id(expense_type_id):\n        return ExpenseType.get_expense_type_by_id(expense_type_id)\n    # New method to add a expense type",
+        "detail": "app.controllers.expense_types_controller",
+        "documentation": {}
+    },
+    {
+        "label": "MembersController",
+        "kind": 6,
+        "importPath": "app.controllers.members_controller",
+        "description": "app.controllers.members_controller",
+        "peekOfCode": "class MembersController:\n    # New method to fetch all members\n    @staticmethod\n    def get_all_members():\n        return Member.get_all_members()\n    # New method to fetch a member\n    @staticmethod\n    def get_member_by_id(member_id):\n        return Member.get_member_by_id(member_id)",
+        "detail": "app.controllers.members_controller",
+        "documentation": {}
+    },
+    {
+        "label": "RolesController",
+        "kind": 6,
+        "importPath": "app.controllers.roles_controller",
+        "description": "app.controllers.roles_controller",
+        "peekOfCode": "class RolesController:\n    # New method to fetch all roles\n    @staticmethod\n    def get_all_roles():\n        return Role.get_all_roles()\n    # New method to fetch a role\n    @staticmethod\n    def get_role_by_id(role_id):\n        return Role.get_role_by_id(role_id)\n    # New method to add a role",
+        "detail": "app.controllers.roles_controller",
+        "documentation": {}
+    },
+    {
+        "label": "UsersController",
+        "kind": 6,
+        "importPath": "app.controllers.users_controller",
+        "description": "app.controllers.users_controller",
+        "peekOfCode": "class UsersController:\n    #method for hashing passwords    \n    @staticmethod\n    def hash_password(password):\n        return hashlib.sha256(password.encode()).hexdigest()\n    # New method to fetch all users\n    @staticmethod\n    def get_all_users():\n        return User.get_all_users()\n    # New method to add a user",
+        "detail": "app.controllers.users_controller",
+        "documentation": {}
+    },
+    {
+        "label": "Cases",
+        "kind": 6,
+        "importPath": "app.models.cases",
+        "description": "app.models.cases",
+        "peekOfCode": "class Cases:\n    # method to fetch all users\n    @staticmethod\n    def get_all_cases():\n        with mysql.connection.cursor() as cursor:\n            cursor.execute(\"\"\"\n                SELECT \n                    cases.id, case_types.case_type, cases.title, cases.description, members.member_id, members.name, cases.case_status, cases.issued_aid, users.firstname, users.lastname, cases.inserted_at, cases.updated_at\n                FROM \n                    cases ",
+        "detail": "app.models.cases",
+        "documentation": {}
+    },
+    {
+        "label": "CaseType",
+        "kind": 6,
+        "importPath": "app.models.case_type",
+        "description": "app.models.case_type",
+        "peekOfCode": "class CaseType:\n    # method to fetch all case types\n    @staticmethod\n    def get_all_case_types():\n        cursor = mysql.connection.cursor()\n        cursor.execute(\"SELECT * FROM case_types\")\n        roles = cursor.fetchall()\n        cursor.close()\n        return roles\n    # method to fetch a case type",
+        "detail": "app.models.case_type",
+        "documentation": {}
+    },
+    {
+        "label": "Contribution",
+        "kind": 6,
+        "importPath": "app.models.contributions",
+        "description": "app.models.contributions",
+        "peekOfCode": "class Contribution:\n    @staticmethod\n    def get_all_case_contributions():\n        with mysql.connection.cursor() as cursor:\n            cursor.execute(\"\"\"\n                SELECT \n                    case_contributions.id, case_contributions.amount, case_contributions.inserted_at, case_contributions.updated_at, cases.title, members.member_id, members.name, users.firstname, users.lastname\n                FROM \n                    case_contributions   \n                INNER JOIN ",
+        "detail": "app.models.contributions",
+        "documentation": {}
+    },
+    {
+        "label": "Due",
+        "kind": 6,
+        "importPath": "app.models.dues",
+        "description": "app.models.dues",
+        "peekOfCode": "class Due:\n    # method to fetch all dues\n    @staticmethod\n    def get_all_dues():\n        with mysql.connection.cursor() as cursor:\n            cursor.execute(\"\"\"\n                SELECT \n                    members.member_id, members.name, dues.id, dues.amount, dues.approval_status, dues.payment_method, dues.month_and_year, dues.inserted_at, users.firstname, users.lastname\n                FROM \n                    dues ",
+        "detail": "app.models.dues",
+        "documentation": {}
+    },
+    {
+        "label": "Expenses",
+        "kind": 6,
+        "importPath": "app.models.expense",
+        "description": "app.models.expense",
+        "peekOfCode": "class Expenses:\n    # method to fetch all expenses\n    @staticmethod\n    def get_all_expenses():\n        with mysql.connection.cursor() as cursor:\n            cursor.execute(\"\"\"\n                SELECT \n                    expense_types.expense_type, expenses.id, expenses.description, expenses.amount, expenses.date, expenses.inserted_at, users.firstname, users.lastname\n                FROM \n                    expenses ",
+        "detail": "app.models.expense",
+        "documentation": {}
+    },
+    {
+        "label": "ExpenseType",
+        "kind": 6,
+        "importPath": "app.models.expense_type",
+        "description": "app.models.expense_type",
+        "peekOfCode": "class ExpenseType:\n    # method to fetch all expense types\n    @staticmethod\n    def get_all_expense_types():\n        cursor = mysql.connection.cursor()\n        cursor.execute(\"SELECT * FROM expense_types\")\n        expense_types = cursor.fetchall()\n        cursor.close()\n        return expense_types\n    # method to fetch a expense type",
+        "detail": "app.models.expense_type",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "kind": 6,
+        "importPath": "app.models.members",
+        "description": "app.models.members",
+        "peekOfCode": "class Member:\n    # method to fetch all members\n    @staticmethod\n    def get_all_members():\n        cursor = mysql.connection.cursor()\n        cursor.execute(\"SELECT * FROM members\")\n        roles = cursor.fetchall()\n        cursor.close()\n        return roles\n    # method to fetch a member",
+        "detail": "app.models.members",
+        "documentation": {}
+    },
+    {
+        "label": "Role",
+        "kind": 6,
+        "importPath": "app.models.role",
+        "description": "app.models.role",
+        "peekOfCode": "class Role:\n    # method to fetch all roles\n    @staticmethod\n    def get_all_roles():\n        cursor = mysql.connection.cursor()\n        cursor.execute(\"SELECT * FROM roles\")\n        roles = cursor.fetchall()\n        cursor.close()\n        return roles\n    # method to fetch a role",
+        "detail": "app.models.role",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "app.models.user",
+        "description": "app.models.user",
+        "peekOfCode": "class User:\n    # method to fetch all users\n    @staticmethod\n    def get_all_users():\n        with mysql.connection.cursor() as cursor:\n            cursor.execute(\"\"\"\n                SELECT \n                    users.id, users.firstname, users.lastname, users.username, users.email, users.status, roles.id, roles.role_name, users.created_at, users.user_image\n                FROM \n                    users ",
+        "detail": "app.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "get_cases",
+        "kind": 2,
+        "importPath": "app.routes.cases_route",
+        "description": "app.routes.cases_route",
+        "peekOfCode": "def get_cases():\n    cases = CasesController.get_all_cases()\n    formatted_cases = []\n    for case in cases:\n        formatted_cases.append({\n            'id': case[0],\n            'case_type': case[1],\n            'title': case[2],\n            'description': case[3],\n            'member_id': case[4],",
+        "detail": "app.routes.cases_route",
+        "documentation": {}
+    },
+    {
+        "label": "get_case_by_id",
+        "kind": 2,
+        "importPath": "app.routes.cases_route",
+        "description": "app.routes.cases_route",
+        "peekOfCode": "def get_case_by_id(case_id):\n    case = CasesController.get_case_by_id(case_id)\n    if case:\n        return jsonify({'case': {'id': case[0], 'case_type': case[1], 'title': case[2], 'description': case[3], 'member_id': case[4], 'name': case[5], 'case_status': case[6], 'issued_aid': case[7], 'firstname': case[8], 'lastname': case[9], 'inserted_at': case[10], 'updated_at': case[11]} })\n    else:\n        return jsonify({'error': 'Case not found', 'status_code': 404}), 404\n# New route to add a case\n@cases_blueprint.route('/cases', methods=['POST'])\ndef add_case():\n    required_fields = ['case_type_id', 'title', 'description', 'beneficiary_id', 'case_status', 'issued_aid', 'user_id']",
+        "detail": "app.routes.cases_route",
+        "documentation": {}
+    },
+    {
+        "label": "add_case",
+        "kind": 2,
+        "importPath": "app.routes.cases_route",
+        "description": "app.routes.cases_route",
+        "peekOfCode": "def add_case():\n    required_fields = ['case_type_id', 'title', 'description', 'beneficiary_id', 'case_status', 'issued_aid', 'user_id']\n    data = request.json\n    missing_fields = [field for field in required_fields if field not in data]\n    if missing_fields:\n        error_message = f\"Missing fields: {', '.join(missing_fields)}\"\n        return jsonify({'error': error_message, 'status_code': 400}), 400\n    case_type_id = data['case_type_id']\n    title = data['title']\n    description = data['description']",
+        "detail": "app.routes.cases_route",
+        "documentation": {}
+    },
+    {
+        "label": "update_case",
+        "kind": 2,
+        "importPath": "app.routes.cases_route",
+        "description": "app.routes.cases_route",
+        "peekOfCode": "def update_case():\n    required_fields = ['case_id', 'case_type_id', 'title', 'description', 'beneficiary_id', 'case_status', 'issued_aid', 'user_id']\n    data = request.json\n    missing_fields = [field for field in required_fields if field not in data]\n    if missing_fields:\n        error_message = f\"Missing fields: {', '.join(missing_fields)}\"\n        return jsonify({'error': error_message, 'status_code': 400}), 400\n    case_type_id = data['case_type_id']\n    title = data['title']\n    description = data['description']",
+        "detail": "app.routes.cases_route",
+        "documentation": {}
+    },
+    {
+        "label": "update_issued_aid",
+        "kind": 2,
+        "importPath": "app.routes.cases_route",
+        "description": "app.routes.cases_route",
+        "peekOfCode": "def update_issued_aid():\n    required_fields = ['amount', 'case_id']\n    data = request.json\n    missing_fields = [field for field in required_fields if field not in data]\n    if missing_fields:\n        error_message = f\"Missing fields: {', '.join(missing_fields)}\"\n        return jsonify({'error': error_message, 'status_code': 400}), 400\n    amount = data['amount']\n    case_id = data['case_id']\n    # Call controller method to update case issued aid",
+        "detail": "app.routes.cases_route",
+        "documentation": {}
+    },
+    {
+        "label": "delete_case_by_id",
+        "kind": 2,
+        "importPath": "app.routes.cases_route",
+        "description": "app.routes.cases_route",
+        "peekOfCode": "def delete_case_by_id(case_id):\n    deleted_case = CasesController.delete_case(case_id)\n    if deleted_case:\n        return jsonify({'message': f'Case with ID {case_id} deleted successfully', 'status_code': 200}), 200\n    else:\n        return jsonify({'error': f'Failed to delete case with ID {case_id}', 'status_code': 500}), 500",
+        "detail": "app.routes.cases_route",
+        "documentation": {}
+    },
+    {
+        "label": "cases_blueprint",
+        "kind": 5,
+        "importPath": "app.routes.cases_route",
+        "description": "app.routes.cases_route",
+        "peekOfCode": "cases_blueprint = Blueprint('cases', __name__)\n# route to fetch all cases\n@cases_blueprint.route('/cases', methods=['GET'])\ndef get_cases():\n    cases = CasesController.get_all_cases()\n    formatted_cases = []\n    for case in cases:\n        formatted_cases.append({\n            'id': case[0],\n            'case_type': case[1],",
+        "detail": "app.routes.cases_route",
+        "documentation": {}
+    },
+    {
+        "label": "get_case_types",
+        "kind": 2,
+        "importPath": "app.routes.case_types_route",
+        "description": "app.routes.case_types_route",
+        "peekOfCode": "def get_case_types():\n    case_types = CaseTypesController.get_all_case_types()\n    formatted_case_types = []\n    for case_type in case_types:\n        formatted_case_types.append({\n            'id': case_type[0],\n            'case_type': case_type[1],\n            'inserted_at': case_type[2],\n            'updated_at': case_type[3]\n        })",
+        "detail": "app.routes.case_types_route",
+        "documentation": {}
+    },
+    {
+        "label": "get_case_type_by_id",
+        "kind": 2,
+        "importPath": "app.routes.case_types_route",
+        "description": "app.routes.case_types_route",
+        "peekOfCode": "def get_case_type_by_id(case_type_id):\n    case_type = CaseTypesController.get_case_type_by_id(case_type_id)\n    if case_type:\n        return jsonify({'role': {'id': case_type[0], 'case_type': case_type[1], 'inserted_at': case_type[2], 'updated_at': case_type[3]} })\n    else:\n        return jsonify({'error': 'Case Type not found', 'status_code': 404}), 404\n# New route to add a case type\n@case_types_blueprint.route('/case_types', methods=['POST'])\ndef add_case_type():\n    case_type = request.json.get('case_type')",
+        "detail": "app.routes.case_types_route",
+        "documentation": {}
+    },
+    {
+        "label": "add_case_type",
+        "kind": 2,
+        "importPath": "app.routes.case_types_route",
+        "description": "app.routes.case_types_route",
+        "peekOfCode": "def add_case_type():\n    case_type = request.json.get('case_type')\n    if not case_type:\n        return jsonify({'error': 'Case type is required', 'status_code': 400}), 400\n    # Call controller method to add case type\n    new_case_type = CaseTypesController.add_case_type(case_type)\n    if new_case_type:\n        return jsonify({'message': 'Case type added successfully', 'case_type': new_case_type, 'status_code': 200}), 200\n    else:\n        return jsonify({'error': 'Failed to add case type', 'status_code': 500}), 500",
+        "detail": "app.routes.case_types_route",
+        "documentation": {}
+    },
+    {
+        "label": "update_case_type_by_id",
+        "kind": 2,
+        "importPath": "app.routes.case_types_route",
+        "description": "app.routes.case_types_route",
+        "peekOfCode": "def update_case_type_by_id(case_type_id):\n    new_case_type = request.json.get('case_type')\n    if not new_case_type:\n        return jsonify({'error': 'New case type is required', 'status_code': 400}), 400\n    updated_case = CaseTypesController.update_case_type(case_type_id, new_case_type)\n    if updated_case:\n        return jsonify({'message': f'Case Type with ID {case_type_id} updated successfully', 'case_type': updated_case, 'status_code': 200}), 200\n    else:\n        return jsonify({'error': f'Failed to update case type with ID {case_type_id}', 'status_code': 500}), 500\n# New route to delete a case type",
+        "detail": "app.routes.case_types_route",
+        "documentation": {}
+    },
+    {
+        "label": "delete_case_type_by_id",
+        "kind": 2,
+        "importPath": "app.routes.case_types_route",
+        "description": "app.routes.case_types_route",
+        "peekOfCode": "def delete_case_type_by_id(case_type_id):\n    deleted_case_type = CaseTypesController.delete_case_type(case_type_id)\n    if deleted_case_type:\n        return jsonify({'message': f'Case Type with ID {case_type_id} deleted successfully', 'status_code': 200}), 200\n    else:\n        return jsonify({'error': f'Failed to delete case type with ID {case_type_id}', 'status_code': 500}), 500",
+        "detail": "app.routes.case_types_route",
+        "documentation": {}
+    },
+    {
+        "label": "case_types_blueprint",
+        "kind": 5,
+        "importPath": "app.routes.case_types_route",
+        "description": "app.routes.case_types_route",
+        "peekOfCode": "case_types_blueprint = Blueprint('case_type', __name__)\n# route to fetch all case types\n@case_types_blueprint.route('/case_types', methods=['GET'])\ndef get_case_types():\n    case_types = CaseTypesController.get_all_case_types()\n    formatted_case_types = []\n    for case_type in case_types:\n        formatted_case_types.append({\n            'id': case_type[0],\n            'case_type': case_type[1],",
+        "detail": "app.routes.case_types_route",
+        "documentation": {}
+    },
+    {
+        "label": "query",
+        "kind": 2,
+        "importPath": "app.routes.chatbot_route",
+        "description": "app.routes.chatbot_route",
+        "peekOfCode": "def query():\n    data = request.get_json()\n    query = data.get('query')\n    if not query:\n        return jsonify({'error': 'Query parameter is missing'}), 400\n    result = agent_executor.run(query)\n    return jsonify({'result': result})",
+        "detail": "app.routes.chatbot_route",
+        "documentation": {}
+    },
+    {
+        "label": "bot_blueprint",
+        "kind": 5,
+        "importPath": "app.routes.chatbot_route",
+        "description": "app.routes.chatbot_route",
+        "peekOfCode": "bot_blueprint = Blueprint('bot', __name__)\nos.environ['OPENAI_API_KEY'] = \"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\"\n# Connect to the MySQL database\nconn = mysql.connector.connect(\n    host=\"127.0.0.1\",\n    user=\"root\",\n    password=\"\",\n    database=\"welfare_management_system_dev\"\n)\n# Create the agent executor",
+        "detail": "app.routes.chatbot_route",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ['OPENAI_API_KEY']",
+        "kind": 5,
+        "importPath": "app.routes.chatbot_route",
+        "description": "app.routes.chatbot_route",
+        "peekOfCode": "os.environ['OPENAI_API_KEY'] = \"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\"\n# Connect to the MySQL database\nconn = mysql.connector.connect(\n    host=\"127.0.0.1\",\n    user=\"root\",\n    password=\"\",\n    database=\"welfare_management_system_dev\"\n)\n# Create the agent executor\nllm = OpenAI(temperature=0)",
+        "detail": "app.routes.chatbot_route",
+        "documentation": {}
+    },
+    {
+        "label": "conn",
+        "kind": 5,
+        "importPath": "app.routes.chatbot_route",
+        "description": "app.routes.chatbot_route",
+        "peekOfCode": "conn = mysql.connector.connect(\n    host=\"127.0.0.1\",\n    user=\"root\",\n    password=\"\",\n    database=\"welfare_management_system_dev\"\n)\n# Create the agent executor\nllm = OpenAI(temperature=0)\ndb = SQLDatabase.from_uri(\"mysql+mysqlconnector://root:@127.0.0.1/welfare_management_system_dev\")\ntoolkit = SQLDatabaseToolkit(db=db, llm=llm)",
+        "detail": "app.routes.chatbot_route",
+        "documentation": {}
+    },
+    {
+        "label": "llm",
+        "kind": 5,
+        "importPath": "app.routes.chatbot_route",
+        "description": "app.routes.chatbot_route",
+        "peekOfCode": "llm = OpenAI(temperature=0)\ndb = SQLDatabase.from_uri(\"mysql+mysqlconnector://root:@127.0.0.1/welfare_management_system_dev\")\ntoolkit = SQLDatabaseToolkit(db=db, llm=llm)\nagent_executor = create_sql_agent(\n    llm=llm,\n    toolkit=toolkit,\n    verbose=True\n)\n# Defining API endpoint\n@bot_blueprint.route('/bot', methods=['POST'])",
+        "detail": "app.routes.chatbot_route",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "app.routes.chatbot_route",
+        "description": "app.routes.chatbot_route",
+        "peekOfCode": "db = SQLDatabase.from_uri(\"mysql+mysqlconnector://root:@127.0.0.1/welfare_management_system_dev\")\ntoolkit = SQLDatabaseToolkit(db=db, llm=llm)\nagent_executor = create_sql_agent(\n    llm=llm,\n    toolkit=toolkit,\n    verbose=True\n)\n# Defining API endpoint\n@bot_blueprint.route('/bot', methods=['POST'])\ndef query():",
+        "detail": "app.routes.chatbot_route",
+        "documentation": {}
+    },
+    {
+        "label": "toolkit",
+        "kind": 5,
+        "importPath": "app.routes.chatbot_route",
+        "description": "app.routes.chatbot_route",
+        "peekOfCode": "toolkit = SQLDatabaseToolkit(db=db, llm=llm)\nagent_executor = create_sql_agent(\n    llm=llm,\n    toolkit=toolkit,\n    verbose=True\n)\n# Defining API endpoint\n@bot_blueprint.route('/bot', methods=['POST'])\ndef query():\n    data = request.get_json()",
+        "detail": "app.routes.chatbot_route",
+        "documentation": {}
+    },
+    {
+        "label": "agent_executor",
+        "kind": 5,
+        "importPath": "app.routes.chatbot_route",
+        "description": "app.routes.chatbot_route",
+        "peekOfCode": "agent_executor = create_sql_agent(\n    llm=llm,\n    toolkit=toolkit,\n    verbose=True\n)\n# Defining API endpoint\n@bot_blueprint.route('/bot', methods=['POST'])\ndef query():\n    data = request.get_json()\n    query = data.get('query')",
+        "detail": "app.routes.chatbot_route",
+        "documentation": {}
+    },
+    {
+        "label": "get_cases",
+        "kind": 2,
+        "importPath": "app.routes.contributions_route",
+        "description": "app.routes.contributions_route",
+        "peekOfCode": "def get_cases():\n    contributions = ContributionsController.get_all_case_contributions()\n    formatted_contributions = []\n    for contribution in contributions:\n        formatted_contributions.append({\n            'id': contribution[0],\n            'amount': contribution[1],\n            'inserted_at': contribution[2],\n            'updated_at': contribution[3],\n            'case_title': contribution[4],",
+        "detail": "app.routes.contributions_route",
+        "documentation": {}
+    },
+    {
+        "label": "get_case_contribution_by_id",
+        "kind": 2,
+        "importPath": "app.routes.contributions_route",
+        "description": "app.routes.contributions_route",
+        "peekOfCode": "def get_case_contribution_by_id(contribution_id):\n    case_contribution = ContributionsController.get_case_contribution_by_id(contribution_id)\n    if case_contribution:\n        return jsonify({'case': {'id': case_contribution[0], 'amount': case_contribution[1], 'inserted_at': case_contribution[2], 'updated_at': case_contribution[3], 'title': case_contribution[4], 'member_id': case_contribution[5], 'member_name': case_contribution[6], 'firstname': case_contribution[7], 'lastname': case_contribution[8]} })\n    else:\n        return jsonify({'error': 'Case Contribution not found', 'status_code': 404}), 404\n# New route to add a case\n@contributions_blueprint.route('/contributions', methods=['POST'])\ndef add_case_contribution():\n    required_fields = ['case_id', 'member_id', 'amount', 'user_id']",
+        "detail": "app.routes.contributions_route",
+        "documentation": {}
+    },
+    {
+        "label": "add_case_contribution",
+        "kind": 2,
+        "importPath": "app.routes.contributions_route",
+        "description": "app.routes.contributions_route",
+        "peekOfCode": "def add_case_contribution():\n    required_fields = ['case_id', 'member_id', 'amount', 'user_id']\n    data = request.json\n    missing_fields = [field for field in required_fields if field not in data]\n    if missing_fields:\n        error_message = f\"Missing fields: {', '.join(missing_fields)}\"\n        return jsonify({'error': error_message, 'status_code': 400}), 400\n    case_id = data['case_id']\n    member_id = data['member_id']\n    amount = data['amount']",
+        "detail": "app.routes.contributions_route",
+        "documentation": {}
+    },
+    {
+        "label": "update_case_contribution",
+        "kind": 2,
+        "importPath": "app.routes.contributions_route",
+        "description": "app.routes.contributions_route",
+        "peekOfCode": "def update_case_contribution():\n    required_fields = ['contribution_id', 'case_id', 'member_id', 'amount', 'user_id']\n    data = request.json\n    missing_fields = [field for field in required_fields if field not in data]\n    if missing_fields:\n        error_message = f\"Missing fields: {', '.join(missing_fields)}\"\n        return jsonify({'error': error_message, 'status_code': 400}), 400\n    contribution_id = data['contribution_id']\n    case_id = data['case_id']\n    member_id = data['member_id']",
+        "detail": "app.routes.contributions_route",
+        "documentation": {}
+    },
+    {
+        "label": "delete_case_contribution_by_id",
+        "kind": 2,
+        "importPath": "app.routes.contributions_route",
+        "description": "app.routes.contributions_route",
+        "peekOfCode": "def delete_case_contribution_by_id(contribution_id):\n    deleted_case_contribution = ContributionsController.delete_case_contriution(contribution_id)\n    if deleted_case_contribution:\n        return jsonify({'message': f'Case Contribution with ID {contribution_id} deleted successfully', 'status_code': 200}), 200\n    else:\n        return jsonify({'error': f'Failed to delete case contribution with ID {contribution_id}', 'status_code': 500}), 500",
+        "detail": "app.routes.contributions_route",
+        "documentation": {}
+    },
+    {
+        "label": "contributions_blueprint",
+        "kind": 5,
+        "importPath": "app.routes.contributions_route",
+        "description": "app.routes.contributions_route",
+        "peekOfCode": "contributions_blueprint = Blueprint('contributions', __name__)\n# route to fetch all cases\n@contributions_blueprint.route('/contributions', methods=['GET'])\ndef get_cases():\n    contributions = ContributionsController.get_all_case_contributions()\n    formatted_contributions = []\n    for contribution in contributions:\n        formatted_contributions.append({\n            'id': contribution[0],\n            'amount': contribution[1],",
+        "detail": "app.routes.contributions_route",
+        "documentation": {}
+    },
+    {
+        "label": "get_dues",
+        "kind": 2,
+        "importPath": "app.routes.dues_route",
+        "description": "app.routes.dues_route",
+        "peekOfCode": "def get_dues():\n    dues = DuesController.get_all_dues()\n    formatted_dues = []\n    for due in dues:\n        formatted_dues.append({\n            'member_id': due[0],\n            'name': due[1],\n            'id': due[2],\n            'amount': due[3],\n            'approval_status': due[4],",
+        "detail": "app.routes.dues_route",
+        "documentation": {}
+    },
+    {
+        "label": "get_due_by_id",
+        "kind": 2,
+        "importPath": "app.routes.dues_route",
+        "description": "app.routes.dues_route",
+        "peekOfCode": "def get_due_by_id(due_id):\n    due = DuesController.get_due_by_id(due_id)\n    if due:\n        return jsonify({'due': {'member_id': due[0], 'name': due[1], 'id': due[2], 'amount': due[3], 'approval_status': due[4], 'payment_method': due[5], 'month_and_year': due[6], 'inserted_at': due[7], 'firstname': due[8], 'lastname': due[9]} })\n    else:\n        return jsonify({'error': 'Due not found', 'status_code': 404}), 404\n# New route to add a due\n@dues_blueprint.route('/dues', methods=['POST'])\ndef add_due():\n    required_fields = ['member_id', 'amount', 'approval_status', 'payment_method', 'month_and_year', 'user_id']",
+        "detail": "app.routes.dues_route",
+        "documentation": {}
+    },
+    {
+        "label": "add_due",
+        "kind": 2,
+        "importPath": "app.routes.dues_route",
+        "description": "app.routes.dues_route",
+        "peekOfCode": "def add_due():\n    required_fields = ['member_id', 'amount', 'approval_status', 'payment_method', 'month_and_year', 'user_id']\n    data = request.json\n    missing_fields = [field for field in required_fields if field not in data]\n    if missing_fields:\n        error_message = f\"Missing fields: {', '.join(missing_fields)}\"\n        return jsonify({'error': error_message, 'status_code': 400}), 400\n    member_id = data['member_id']\n    amount = data['amount']\n    approval_status = data['approval_status']",
+        "detail": "app.routes.dues_route",
+        "documentation": {}
+    },
+    {
+        "label": "update_due",
+        "kind": 2,
+        "importPath": "app.routes.dues_route",
+        "description": "app.routes.dues_route",
+        "peekOfCode": "def update_due():\n    required_fields = ['due_id', 'member_id', 'amount', 'payment_method', 'month_and_year', 'user_id']\n    data = request.json\n    missing_fields = [field for field in required_fields if field not in data]\n    if missing_fields:\n        error_message = f\"Missing fields: {', '.join(missing_fields)}\"\n        return jsonify({'error': error_message, 'status_code': 400}), 400\n    due_id = data['due_id']\n    member_id = data['member_id']\n    amount = data['amount']",
+        "detail": "app.routes.dues_route",
+        "documentation": {}
+    },
+    {
+        "label": "update_due_approval_status",
+        "kind": 2,
+        "importPath": "app.routes.dues_route",
+        "description": "app.routes.dues_route",
+        "peekOfCode": "def update_due_approval_status():\n    required_fields = ['approval_status', 'due_id']\n    data = request.json\n    missing_fields = [field for field in required_fields if field not in data]\n    if missing_fields:\n        error_message = f\"Missing fields: {', '.join(missing_fields)}\"\n        return jsonify({'error': error_message, 'status_code': 400}), 400\n    approval_status = data['approval_status']\n    due_id = data['due_id']\n    # Call controller method to update due approval status",
+        "detail": "app.routes.dues_route",
+        "documentation": {}
+    },
+    {
+        "label": "delete_due_by_id",
+        "kind": 2,
+        "importPath": "app.routes.dues_route",
+        "description": "app.routes.dues_route",
+        "peekOfCode": "def delete_due_by_id(due_id):\n    deleted_due = DuesController.delete_due(due_id)\n    if deleted_due:\n        return jsonify({'message': f'Due with ID {due_id} deleted successfully', 'status_code': 200}), 200\n    else:\n        return jsonify({'error': f'Failed to delete due with ID {due_id}', 'status_code': 500}), 500",
+        "detail": "app.routes.dues_route",
+        "documentation": {}
+    },
+    {
+        "label": "dues_blueprint",
+        "kind": 5,
+        "importPath": "app.routes.dues_route",
+        "description": "app.routes.dues_route",
+        "peekOfCode": "dues_blueprint = Blueprint('dues', __name__)\n# route to fetch all dues\n@dues_blueprint.route('/dues', methods=['GET'])\ndef get_dues():\n    dues = DuesController.get_all_dues()\n    formatted_dues = []\n    for due in dues:\n        formatted_dues.append({\n            'member_id': due[0],\n            'name': due[1],",
+        "detail": "app.routes.dues_route",
+        "documentation": {}
+    },
+    {
+        "label": "get_expenses",
+        "kind": 2,
+        "importPath": "app.routes.expenses_routes",
+        "description": "app.routes.expenses_routes",
+        "peekOfCode": "def get_expenses():\n    expenses = ExpensesController.get_all_expenses()\n    formatted_expenses = []\n    for expense in expenses:\n        formatted_expenses.append({\n            'expense_type': expense[0],\n            'id': expense[1],\n            'description': expense[2],\n            'amount': expense[3],\n            'date': expense[4],",
+        "detail": "app.routes.expenses_routes",
+        "documentation": {}
+    },
+    {
+        "label": "get_expense_by_id",
+        "kind": 2,
+        "importPath": "app.routes.expenses_routes",
+        "description": "app.routes.expenses_routes",
+        "peekOfCode": "def get_expense_by_id(expense_id):\n    expense = ExpensesController.get_expense_by_id(expense_id)\n    if expense:\n        return jsonify({'expense': {'expense_type': expense[0], 'id': expense[1], 'description': expense[2], 'amount': expense[3], 'date': expense[4], 'inserted_at': expense[5], 'firstname': expense[6], 'lastname': expense[7]} })\n    else:\n        return jsonify({'error': 'Expense not found', 'status_code': 404}), 404\n# New route to add a expense\n@expenses_blueprint.route('/expenses', methods=['POST'])\ndef add_case():\n    required_fields = ['expense_type_id', 'description', 'amount', 'date', 'user_id']",
+        "detail": "app.routes.expenses_routes",
+        "documentation": {}
+    },
+    {
+        "label": "add_case",
+        "kind": 2,
+        "importPath": "app.routes.expenses_routes",
+        "description": "app.routes.expenses_routes",
+        "peekOfCode": "def add_case():\n    required_fields = ['expense_type_id', 'description', 'amount', 'date', 'user_id']\n    data = request.json\n    missing_fields = [field for field in required_fields if field not in data]\n    if missing_fields:\n        error_message = f\"Missing fields: {', '.join(missing_fields)}\"\n        return jsonify({'error': error_message, 'status_code': 400}), 400\n    expense_type_id = data['expense_type_id']\n    description = data['description']\n    amount = data['amount']",
+        "detail": "app.routes.expenses_routes",
+        "documentation": {}
+    },
+    {
+        "label": "update_case",
+        "kind": 2,
+        "importPath": "app.routes.expenses_routes",
+        "description": "app.routes.expenses_routes",
+        "peekOfCode": "def update_case():\n    required_fields = ['expense_id', 'expense_type_id', 'description', 'amount', 'date', 'user_id']\n    data = request.json\n    missing_fields = [field for field in required_fields if field not in data]\n    if missing_fields:\n        error_message = f\"Missing fields: {', '.join(missing_fields)}\"\n        return jsonify({'error': error_message, 'status_code': 400}), 400\n    expense_id = data['expense_id']\n    expense_type_id = data['expense_type_id']\n    description = data['description']",
+        "detail": "app.routes.expenses_routes",
+        "documentation": {}
+    },
+    {
+        "label": "delete_expenses_by_id",
+        "kind": 2,
+        "importPath": "app.routes.expenses_routes",
+        "description": "app.routes.expenses_routes",
+        "peekOfCode": "def delete_expenses_by_id(expense_id):\n    deleted_expense = ExpensesController.delete_expense(expense_id)\n    if deleted_expense:\n        return jsonify({'message': f'Expense with ID {expense_id} deleted successfully', 'status_code': 200}), 200\n    else:\n        return jsonify({'error': f'Failed to delete expense with ID {expense_id}', 'status_code': 500}), 500",
+        "detail": "app.routes.expenses_routes",
+        "documentation": {}
+    },
+    {
+        "label": "expenses_blueprint",
+        "kind": 5,
+        "importPath": "app.routes.expenses_routes",
+        "description": "app.routes.expenses_routes",
+        "peekOfCode": "expenses_blueprint = Blueprint('expenses', __name__)\n# route to fetch all expenses\n@expenses_blueprint.route('/expenses', methods=['GET'])\ndef get_expenses():\n    expenses = ExpensesController.get_all_expenses()\n    formatted_expenses = []\n    for expense in expenses:\n        formatted_expenses.append({\n            'expense_type': expense[0],\n            'id': expense[1],",
+        "detail": "app.routes.expenses_routes",
+        "documentation": {}
+    },
+    {
+        "label": "get_expense_types",
+        "kind": 2,
+        "importPath": "app.routes.expense_types_route",
+        "description": "app.routes.expense_types_route",
+        "peekOfCode": "def get_expense_types():\n    expense_types = ExpenseTypesController.get_all_expense_types()\n    formatted_expense_types = []\n    for expense_type in expense_types:\n        formatted_expense_types.append({\n            'id': expense_type[0],\n            'expense_type': expense_type[1],\n            'inserted_at': expense_type[2],\n            'updated_at': expense_type[3]\n        })",
+        "detail": "app.routes.expense_types_route",
+        "documentation": {}
+    },
+    {
+        "label": "get_expense_type_by_id",
+        "kind": 2,
+        "importPath": "app.routes.expense_types_route",
+        "description": "app.routes.expense_types_route",
+        "peekOfCode": "def get_expense_type_by_id(expense_type_id):\n    expense_type = ExpenseTypesController.get_expense_type_by_id(expense_type_id)\n    if expense_type:\n        return jsonify({'expense_type': {'id': expense_type[0], 'expense_type': expense_type[1], 'inserted_at': expense_type[2], 'updated_at': expense_type[3]} })\n    else:\n        return jsonify({'error': 'Expense Type not found', 'status_code': 404}), 404\n# New route to add a expense type\n@expense_types_blueprint.route('/expense_types', methods=['POST'])\ndef add_expense_type():\n    expense_type = request.json.get('expense_type')",
+        "detail": "app.routes.expense_types_route",
+        "documentation": {}
+    },
+    {
+        "label": "add_expense_type",
+        "kind": 2,
+        "importPath": "app.routes.expense_types_route",
+        "description": "app.routes.expense_types_route",
+        "peekOfCode": "def add_expense_type():\n    expense_type = request.json.get('expense_type')\n    if not expense_type:\n        return jsonify({'error': 'Expense type is required', 'status_code': 400}), 400\n    # Call controller method to add expense type\n    new_expense_type = ExpenseTypesController.add_expense_type(expense_type)\n    if new_expense_type:\n        return jsonify({'message': 'Expense type added successfully', 'expense_type': new_expense_type, 'status_code': 200}), 200\n    else:\n        return jsonify({'error': 'Failed to add expense type', 'status_code': 500}), 500",
+        "detail": "app.routes.expense_types_route",
+        "documentation": {}
+    },
+    {
+        "label": "update_expense_type_by_id",
+        "kind": 2,
+        "importPath": "app.routes.expense_types_route",
+        "description": "app.routes.expense_types_route",
+        "peekOfCode": "def update_expense_type_by_id(expense_type_id):\n    new_expense_type = request.json.get('expense_type')\n    if not new_expense_type:\n        return jsonify({'error': 'New expense type is required', 'status_code': 400}), 400\n    updated_case = ExpenseTypesController.update_expense_type(expense_type_id, new_expense_type)\n    if updated_case:\n        return jsonify({'message': f'Expense Type with ID {expense_type_id} updated successfully', 'expense_type': updated_case, 'status_code': 200}), 200\n    else:\n        return jsonify({'error': f'Failed to update expense type with ID {expense_type_id}', 'status_code': 500}), 500\n# New route to delete a expense type",
+        "detail": "app.routes.expense_types_route",
+        "documentation": {}
+    },
+    {
+        "label": "delete_expense_type_by_id",
+        "kind": 2,
+        "importPath": "app.routes.expense_types_route",
+        "description": "app.routes.expense_types_route",
+        "peekOfCode": "def delete_expense_type_by_id(expense_type_id):\n    deleted_expense_type = ExpenseTypesController.delete_expense_type(expense_type_id)\n    if deleted_expense_type:\n        return jsonify({'message': f'Expense Type with ID {expense_type_id} deleted successfully', 'status_code': 200}), 200\n    else:\n        return jsonify({'error': f'Failed to delete expense type with ID {expense_type_id}', 'status_code': 500}), 500",
+        "detail": "app.routes.expense_types_route",
+        "documentation": {}
+    },
+    {
+        "label": "expense_types_blueprint",
+        "kind": 5,
+        "importPath": "app.routes.expense_types_route",
+        "description": "app.routes.expense_types_route",
+        "peekOfCode": "expense_types_blueprint = Blueprint('expense_type', __name__)\n# route to fetch all expense types\n@expense_types_blueprint.route('/expense_types', methods=['GET'])\ndef get_expense_types():\n    expense_types = ExpenseTypesController.get_all_expense_types()\n    formatted_expense_types = []\n    for expense_type in expense_types:\n        formatted_expense_types.append({\n            'id': expense_type[0],\n            'expense_type': expense_type[1],",
+        "detail": "app.routes.expense_types_route",
+        "documentation": {}
+    },
+    {
+        "label": "get_members",
+        "kind": 2,
+        "importPath": "app.routes.members_route",
+        "description": "app.routes.members_route",
+        "peekOfCode": "def get_members():\n    members = MembersController.get_all_members()\n    formatted_members = []\n    for member in members:\n        formatted_members.append({\n            'id': member[0],\n            'member_id': member[1],\n            'name': member[2],\n            'inserted_at': member[3],\n            'updated_at': member[4]",
+        "detail": "app.routes.members_route",
+        "documentation": {}
+    },
+    {
+        "label": "get_member_by_id",
+        "kind": 2,
+        "importPath": "app.routes.members_route",
+        "description": "app.routes.members_route",
+        "peekOfCode": "def get_member_by_id(member_id):\n    member = MembersController.get_member_by_id(member_id)\n    if member:\n        return jsonify({'member': {'id': member[0], 'member_id': member[1], 'name': member[2], 'inserted_at': member[3], 'updated_at': member[4]} })\n    else:\n        return jsonify({'error': 'Member not found', 'status_code': 404}), 404",
+        "detail": "app.routes.members_route",
+        "documentation": {}
+    },
+    {
+        "label": "members_blueprint",
+        "kind": 5,
+        "importPath": "app.routes.members_route",
+        "description": "app.routes.members_route",
+        "peekOfCode": "members_blueprint = Blueprint('members', __name__)\n# route to fetch all members\n@members_blueprint.route('/members', methods=['GET'])\ndef get_members():\n    members = MembersController.get_all_members()\n    formatted_members = []\n    for member in members:\n        formatted_members.append({\n            'id': member[0],\n            'member_id': member[1],",
+        "detail": "app.routes.members_route",
+        "documentation": {}
+    },
+    {
+        "label": "get_roles",
+        "kind": 2,
+        "importPath": "app.routes.roles_route",
+        "description": "app.routes.roles_route",
+        "peekOfCode": "def get_roles():\n    roles = RolesController.get_all_roles()\n    formatted_roles = []\n    for role in roles:\n        formatted_roles.append({\n            'id': role[0],\n            'role_name': role[1],\n            'inserted_at': role[2],\n            'updated_at': role[3]\n        })",
+        "detail": "app.routes.roles_route",
+        "documentation": {}
+    },
+    {
+        "label": "get_role_by_id",
+        "kind": 2,
+        "importPath": "app.routes.roles_route",
+        "description": "app.routes.roles_route",
+        "peekOfCode": "def get_role_by_id(role_id):\n    role = RolesController.get_role_by_id(role_id)\n    if role:\n        return jsonify({'role': {'id': role[0], 'role_name': role[1], 'inserted_at': role[2], 'updated_at': role[3]} })\n    else:\n        return jsonify({'error': 'Role not found', 'status_code': 404}), 404\n# New route to add a role\n@roles_blueprint.route('/roles', methods=['POST'])\ndef add_role():\n    role_name = request.json.get('role_name')",
+        "detail": "app.routes.roles_route",
+        "documentation": {}
+    },
+    {
+        "label": "add_role",
+        "kind": 2,
+        "importPath": "app.routes.roles_route",
+        "description": "app.routes.roles_route",
+        "peekOfCode": "def add_role():\n    role_name = request.json.get('role_name')\n    if not role_name:\n        return jsonify({'error': 'Role name is required', 'status_code': 400}), 400\n    # Call controller method to add role\n    new_role = RolesController.add_role(role_name)\n    if new_role:\n        return jsonify({'message': 'Role added successfully', 'role': new_role, 'status_code': 200}), 200\n    else:\n        return jsonify({'error': 'Failed to add role', 'status_code': 500}), 500",
+        "detail": "app.routes.roles_route",
+        "documentation": {}
+    },
+    {
+        "label": "update_role_by_id",
+        "kind": 2,
+        "importPath": "app.routes.roles_route",
+        "description": "app.routes.roles_route",
+        "peekOfCode": "def update_role_by_id(role_id):\n    new_role_name = request.json.get('role_name')\n    if not new_role_name:\n        return jsonify({'error': 'New role name is required', 'status_code': 400}), 400\n    updated_role = RolesController.update_role(role_id, new_role_name)\n    if updated_role:\n        return jsonify({'message': f'Role with ID {role_id} updated successfully', 'role': updated_role, 'status_code': 200}), 200\n    else:\n        return jsonify({'error': f'Failed to update role with ID {role_id}', 'status_code': 500}), 500\n# New route to delete a role",
+        "detail": "app.routes.roles_route",
+        "documentation": {}
+    },
+    {
+        "label": "delete_role_by_id",
+        "kind": 2,
+        "importPath": "app.routes.roles_route",
+        "description": "app.routes.roles_route",
+        "peekOfCode": "def delete_role_by_id(role_id):\n    deleted_role = RolesController.delete_role(role_id)\n    if deleted_role:\n        return jsonify({'message': f'Role with ID {role_id} deleted successfully', 'status_code': 200}), 200\n    else:\n        return jsonify({'error': f'Failed to delete role with ID {role_id}', 'status_code': 500}), 500",
+        "detail": "app.routes.roles_route",
+        "documentation": {}
+    },
+    {
+        "label": "roles_blueprint",
+        "kind": 5,
+        "importPath": "app.routes.roles_route",
+        "description": "app.routes.roles_route",
+        "peekOfCode": "roles_blueprint = Blueprint('roles', __name__)\n# route to fetch all roles\n@roles_blueprint.route('/roles', methods=['GET'])\ndef get_roles():\n    roles = RolesController.get_all_roles()\n    formatted_roles = []\n    for role in roles:\n        formatted_roles.append({\n            'id': role[0],\n            'role_name': role[1],",
+        "detail": "app.routes.roles_route",
+        "documentation": {}
+    },
+    {
+        "label": "get_users",
+        "kind": 2,
+        "importPath": "app.routes.users_route",
+        "description": "app.routes.users_route",
+        "peekOfCode": "def get_users():\n    users = UsersController.get_all_users()\n    formatted_users = []\n    for user in users:\n        formatted_users.append({\n            'id': user[0],\n            'firstname': user[1],\n            'lastname': user[2],\n            'username': user[3],\n            'email': user[4],",
+        "detail": "app.routes.users_route",
+        "documentation": {}
+    },
+    {
+        "label": "add_user",
+        "kind": 2,
+        "importPath": "app.routes.users_route",
+        "description": "app.routes.users_route",
+        "peekOfCode": "def add_user():\n    required_fields = ['first_name', 'last_name', 'username', 'password', 'email', 'status', 'role_id', 'user_image']\n    data = request.json\n    missing_fields = [field for field in required_fields if field not in data]\n    if missing_fields:\n        error_message = f\"Missing fields: {', '.join(missing_fields)}\"\n        return jsonify({'error': error_message, 'status_code': 400}), 400\n    first_name = data['first_name']\n    last_name = data['last_name']\n    username = data['username']",
+        "detail": "app.routes.users_route",
+        "documentation": {}
+    },
+    {
+        "label": "update_user",
+        "kind": 2,
+        "importPath": "app.routes.users_route",
+        "description": "app.routes.users_route",
+        "peekOfCode": "def update_user():\n    required_fields = ['first_name', 'last_name', 'username', 'user_id', 'email', 'status', 'role_id', 'user_image']\n    data = request.json\n    missing_fields = [field for field in required_fields if field not in data]\n    if missing_fields:\n        error_message = f\"Missing fields: {', '.join(missing_fields)}\"\n        return jsonify({'error': error_message, 'status_code': 400}), 400\n    first_name = data['first_name']\n    last_name = data['last_name']\n    username = data['username']",
+        "detail": "app.routes.users_route",
+        "documentation": {}
+    },
+    {
+        "label": "update_password",
+        "kind": 2,
+        "importPath": "app.routes.users_route",
+        "description": "app.routes.users_route",
+        "peekOfCode": "def update_password():\n    required_fields = ['password', 'user_id']\n    data = request.json\n    missing_fields = [field for field in required_fields if field not in data]\n    if missing_fields:\n        error_message = f\"Missing fields: {', '.join(missing_fields)}\"\n        return jsonify({'error': error_message, 'status_code': 400}), 400\n    password = data['password']\n    user_id = data['user_id']\n    # Call controller method to update user account details",
+        "detail": "app.routes.users_route",
+        "documentation": {}
+    },
+    {
+        "label": "delete_user_by_id",
+        "kind": 2,
+        "importPath": "app.routes.users_route",
+        "description": "app.routes.users_route",
+        "peekOfCode": "def delete_user_by_id(user_id):\n    deleted_user = UsersController.delete_user(user_id)\n    if deleted_user:\n        return jsonify({'message': f'User with ID {user_id} deleted successfully', 'status_code': 200}), 200\n    else:\n        return jsonify({'error': f'Failed to delete user with ID {user_id}', 'status_code': 500}), 500\n# Route to fetch a specific user by ID\n@users_blueprint.route('/users/<int:user_id>', methods=['GET'])\ndef get_user_by_id(user_id):\n    user = UsersController.get_user_by_id(user_id)",
+        "detail": "app.routes.users_route",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_by_id",
+        "kind": 2,
+        "importPath": "app.routes.users_route",
+        "description": "app.routes.users_route",
+        "peekOfCode": "def get_user_by_id(user_id):\n    user = UsersController.get_user_by_id(user_id)\n    if user:\n        return jsonify({'user': {'id': user[0], 'firstname': user[1], 'lastname': user[2], 'username': user[3], 'email': user[4], 'status': user[5], 'role_id': user[6], 'role_name': user[7], 'created_at': user[8], 'user_image': user[9]} })\n    else:\n        return jsonify({'error': 'User not found', 'status_code': 404}), 404",
+        "detail": "app.routes.users_route",
+        "documentation": {}
+    },
+    {
+        "label": "users_blueprint",
+        "kind": 5,
+        "importPath": "app.routes.users_route",
+        "description": "app.routes.users_route",
+        "peekOfCode": "users_blueprint = Blueprint('users', __name__)\n# route to fetch all roles\n@users_blueprint.route('/users', methods=['GET'])\ndef get_users():\n    users = UsersController.get_all_users()\n    formatted_users = []\n    for user in users:\n        formatted_users.append({\n            'id': user[0],\n            'firstname': user[1],",
+        "detail": "app.routes.users_route",
+        "documentation": {}
+    },
+    {
+        "label": "check_token",
+        "kind": 2,
+        "importPath": "app.auth_middleware",
+        "description": "app.auth_middleware",
+        "peekOfCode": "def check_token():\n    token = request.headers.get('User-Token')\n    if not token:\n        return jsonify({'error': 'Unauthorized Request', 'status_code': 401}), 401\n    cursor = mysql.connection.cursor()\n    cursor.execute(\"SELECT * FROM api_tokens WHERE token = %s\", (token,))\n    token_data = cursor.fetchone()\n    if not token_data:\n        cursor.close()\n        return jsonify({'error': 'Invalid Authentication Token', 'status_code': 401}), 401",
+        "detail": "app.auth_middleware",
+        "documentation": {}
+    },
+    {
+        "label": "register_middleware",
+        "kind": 2,
+        "importPath": "app.auth_middleware",
+        "description": "app.auth_middleware",
+        "peekOfCode": "def register_middleware(app):\n    @app.before_request\n    def before_request():\n        result = check_token()\n        if result:\n            return result  # Return error response if authorization fails",
+        "detail": "app.auth_middleware",
+        "documentation": {}
+    },
+    {
+        "label": "mysql",
+        "kind": 5,
+        "importPath": "app.db",
+        "description": "app.db",
+        "peekOfCode": "mysql = MySQL()",
+        "detail": "app.db",
+        "documentation": {}
+    }
+]
