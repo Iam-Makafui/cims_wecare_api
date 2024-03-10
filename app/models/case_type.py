@@ -1,64 +1,44 @@
-from app.db import mysql  
+# from app.db import mysql  
+from app.db import db
 
-class CaseType:
-    # method to fetch all case types
+class CaseType(db.Model):
+    __tablename__ = 'case_types'
+
+    id = db.Column(db.Integer, primary_key=True)
+    case_type = db.Column(db.String(255), nullable=False)
+
     @staticmethod
     def get_all_case_types():
-        cursor = mysql.connection.cursor()
-        cursor.execute("SELECT * FROM case_types")
-        roles = cursor.fetchall()
-        cursor.close()
-        return roles
-    
-    # method to fetch a case type
+        return CaseType.query.all()
+
     @staticmethod
     def get_case_type_by_id(case_type_id):
-        cursor = mysql.connection.cursor()
-        cursor.execute("SELECT * FROM case_types WHERE id = %s", (case_type_id,))
-        case_type = cursor.fetchone()
-        cursor.close()
-        return case_type
-    
-    
-    # method to add a case type
+        return CaseType.query.get(case_type_id)
+
     @staticmethod
     def add_case_type(case_type):
-        try:
-            cursor = mysql.connection.cursor()
-            cursor.execute("INSERT INTO case_types (case_type) VALUES (%s)", (case_type,))
-            mysql.connection.commit()
-            cursor.close()
-            return {'case_type': case_type}
-        except Exception as e:
-            print(e)  # Handle the exception according to your application's error handling
-            return None
-        
-        
-    # method to update a case type
+        new_case_type = CaseType(case_type=case_type)
+        db.session.add(new_case_type)
+        db.session.commit()
+        return {'case_type': new_case_type.case_type}
+
     @staticmethod
     def update_case_type(case_type_id, new_case_type):
-        try:
-            cursor = mysql.connection.cursor()
-            cursor.execute("UPDATE case_types SET case_type = %s WHERE id = %s", (new_case_type, case_type_id))
-            mysql.connection.commit()
-            cursor.close()
+        case_type = CaseType.query.get(case_type_id)
+        if case_type:
+            case_type.case_type = new_case_type
+            db.session.commit()
             return {'case_type_id': case_type_id, 'case_type': new_case_type}
-        except Exception as e:
-            print(e)  # Handle the exception according to your application's error handling
-            return None
-        
-        
-    # method to delete a case type    
+        return None
+
     @staticmethod
     def delete_case_type(case_type_id):
-        try:
-            cursor = mysql.connection.cursor()
-            cursor.execute("DELETE FROM case_types WHERE id = %s", (case_type_id,))
-            mysql.connection.commit()
-            cursor.close()
+        case_type = CaseType.query.get(case_type_id)
+        if case_type:
+            db.session.delete(case_type)
+            db.session.commit()
             return {'case_type_id': case_type_id}
-        except Exception as e:
-            print(e)  # Handle the exception according to your application's error handling
-            return None
+        return None
+
 
 

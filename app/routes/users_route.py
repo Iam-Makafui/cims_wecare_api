@@ -29,24 +29,28 @@ def get_users():
 # New route to add a user
 @users_blueprint.route('/users', methods=['POST'])
 def add_user():
-    required_fields = ['first_name', 'last_name', 'username', 'password', 'email', 'status', 'role_id', 'user_image']
+    required_fields = ['profile_id', 'first_name', 'last_name', 'password', 'email', 'status', 'role_id', 'user_image', 'cm_sys', 'cw_sys', 'ca_sys', 'w_sys']
     data = request.json
     missing_fields = [field for field in required_fields if field not in data]
     if missing_fields:
         error_message = f"Missing fields: {', '.join(missing_fields)}"
         return jsonify({'error': error_message, 'status_code': 400}), 400
     
+    profile_id = data['profile_id']
     first_name = data['first_name']
     last_name = data['last_name']
-    username = data['username']
     password = data['password']
     email = data['email']
     status = data['status']
     role_id = data['role_id']
     user_image = data['user_image']
+    cm_sys = data['cm_sys']
+    cw_sys = data['cw_sys']
+    ca_sys = data['ca_sys']
+    w_sys = data['w_sys']
 
     # Call controller method to add user
-    new_user = UsersController.add_user(first_name, last_name, username, password, email, status, role_id, user_image)
+    new_user = UsersController.add_user(profile_id, first_name, last_name, email, password, status, role_id, user_image, cm_sys, cw_sys, ca_sys, w_sys)
     
     if new_user:
         return jsonify({'message': 'User added successfully', 'user': new_user, 'status_code': 200}), 200

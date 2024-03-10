@@ -14,9 +14,9 @@ class UsersController:
     
     # New method to add a user
     @staticmethod
-    def add_user(firstname, lastname, username, password, email, status, role_id, user_image):
+    def add_user(profile_id, firstname, lastname, email, password, status, role_id, user_image, cm_sys, cw_sys, ca_sys, w_sys):
         hashed_password = UsersController.hash_password(password)
-        return User.add_user(firstname, lastname, username, hashed_password, email, status, role_id, user_image)
+        return User.add_user(profile_id, firstname, lastname, email, password, status, role_id, user_image, cm_sys, cw_sys, ca_sys, w_sys)
     
     # New method to update a user
     @staticmethod
