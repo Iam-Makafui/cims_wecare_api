@@ -1,29 +1,12 @@
 from flask import Flask
-# from app.routes.roles_route import roles_blueprint
 from app.routes.users_route import users_blueprint
-# from app.routes.members_route import members_blueprint
-# from app.routes.case_types_route import case_types_blueprint
-# from app.routes.cases_route import cases_blueprint
-# from app.routes.contributions_route import contributions_blueprint
-# from app.routes.dues_route import dues_blueprint
-# from app.routes.chatbot_route import bot_blueprint
-# from app.routes.expense_types_route import expense_types_blueprint
-# from app.routes.expenses_routes import expenses_blueprint
+from app.routes.files_route import files_blueprint
 from app.auth_middleware import register_middleware
 # from app.db import mysql  # Import the MySQL instance
 from app.db import db  # Import the SQLAlchemy instance
 
 def create_app():
     app = Flask(__name__)
-
-    # Configure MySQL
-    # app.config['MYSQL_HOST'] = 'localhost'
-    # app.config['MYSQL_USER'] = 'root'
-    # app.config['MYSQL_PASSWORD'] = ''
-    # app.config['MYSQL_DB'] = 'welfare_management_system_dev'
-
-    # # Initialize MySQL
-    # mysql.init_app(app)
     
     # Configure PostgreSQL
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@localhost/church_administrative_db_dev'
@@ -31,29 +14,8 @@ def create_app():
     # Initialize SQLAlchemy
     db.init_app(app)
 
-
-    # Register blueprints, middleware, etc.
-    
-    #roles blueprint
-    # app.register_blueprint(roles_blueprint)
-    #user blueprint
     app.register_blueprint(users_blueprint)
-    #members blueprint
-    # app.register_blueprint(members_blueprint)
-    # #case type blueprint
-    # app.register_blueprint(case_types_blueprint)
-    # #cases blueprint
-    # app.register_blueprint(cases_blueprint)
-    # #case contribution blueprint
-    # app.register_blueprint(contributions_blueprint)
-    # #dues blueprint
-    # app.register_blueprint(dues_blueprint)
-    # #bot blueprint
-    # app.register_blueprint(bot_blueprint)
-    # #expense types blueprint
-    # app.register_blueprint(expense_types_blueprint)
-    # #expense blueprint
-    # app.register_blueprint(expenses_blueprint)
+    app.register_blueprint(files_blueprint)
     
     register_middleware(app)
 

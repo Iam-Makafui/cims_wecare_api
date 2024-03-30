@@ -14,9 +14,9 @@ class UsersController:
     
     # New method to add a user
     @staticmethod
-    def add_user(profile_id, firstname, lastname, email, password, status, role_id, user_image, cm_sys, cw_sys, ca_sys, w_sys):
+    def add_user(profile_id, firstname, lastname, email, phone_number, password, status, role_id, user_image, cims_package, cm_sys, cw_sys, ca_sys, w_sys):
         hashed_password = UsersController.hash_password(password)
-        return User.add_user(profile_id, firstname, lastname, email, password, status, role_id, user_image, cm_sys, cw_sys, ca_sys, w_sys)
+        return User.add_user(profile_id, firstname, lastname, email, phone_number, password, status, role_id, user_image, cims_package, cm_sys, cw_sys, ca_sys, w_sys)
     
     # New method to update a user
     @staticmethod
@@ -41,3 +41,10 @@ class UsersController:
     @staticmethod
     def get_user_by_id(user_id):
         return User.get_a_user(user_id)
+    
+    
+    
+    # New method to fetch last inserted profile
+    @staticmethod
+    def get_last_inserted_profile():
+        return User.get_last_inserted_profile()

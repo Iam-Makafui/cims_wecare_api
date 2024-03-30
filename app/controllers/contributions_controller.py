@@ -7,7 +7,7 @@ class ContributionsController:
         return Contribution.get_all_case_contributions()
     
     # New method to fetch a case contribution
-    @staticmethod
+    @staticmethod   
     def get_case_contribution_by_id(contribution_id):
         return Contribution.get_a_case_contribution(contribution_id)
 

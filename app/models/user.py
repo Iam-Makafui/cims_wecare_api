@@ -24,15 +24,15 @@ class User:
     
     # method to add a user
     @staticmethod
-    def add_user(profile_id, firstname, lastname, email, password, status, role_id, user_image, cm_sys, cw_sys, ca_sys, w_sys):
+    def add_user(profile_id, firstname, lastname, email, phone_number, password, status, role_id, user_image, cims_package, cm_sys, cw_sys, ca_sys, w_sys):
         try:
             connection = db.engine.raw_connection()
             cursor = connection.cursor()
-            cursor.execute("INSERT INTO profiles (profile_id, first_name, last_name, email, password, profile_status, profile_type, profile_image, cm_sys, cw_sys, ca_sys, w_sys) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
-                        (profile_id, firstname, lastname, email, password, status, role_id, user_image, cm_sys, cw_sys, ca_sys, w_sys,))
+            cursor.execute("INSERT INTO profiles (profile_id, first_name, last_name, email, phone_number, password, profile_status, profile_type, profile_image, cims_package, cm_sys, cw_sys, ca_sys, w_sys) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+                        (profile_id, firstname, lastname, email, phone_number, password, status, role_id, user_image, cims_package, cm_sys, cw_sys, ca_sys, w_sys,))
             connection.commit()  # Commit changes to the database
             cursor.close()
-            return {'profile_id': profile_id, 'first_name': firstname, 'last_name': lastname, 'email': email, 'status': status, 'image': user_image}
+            return {'profile_id': profile_id, 'first_name': firstname, 'last_name': lastname, 'email': email, phone_number: phone_number, 'status': status, 'image': user_image}
         except Exception as e:
              print(e)  # Handle the exception according to your application's error handling
              return None
@@ -83,21 +83,41 @@ class User:
         
         
     # method to fetch a user
+    # @staticmethod
+    # def get_a_user(user_id):
+    #     with mysql.connection.cursor() as cursor:
+    #         cursor.execute("""
+    #             SELECT 
+    #                 users.id, users.firstname, users.lastname, users.username, users.email, users.status, roles.id, roles.role_name, users.created_at, users.user_image
+    #             FROM 
+    #                 users
+    #             INNER JOIN 
+    #                 roles ON users.role_id = roles.id 
+    #             WHERE 
+    #                 users.id = %s 
+    #             ORDER BY 
+    #                 users.id DESC
+    #         """, (user_id,))
+    #         user = cursor.fetchone()
+    #     return user
+    
+    
+    # method to fetch a user
     @staticmethod
-    def get_a_user(user_id):
-        with mysql.connection.cursor() as cursor:
-            cursor.execute("""
+    def get_last_inserted_profile():
+        connection = db.engine.raw_connection()
+        cursor = connection.cursor()
+        cursor.execute("""
                 SELECT 
-                    users.id, users.firstname, users.lastname, users.username, users.email, users.status, roles.id, roles.role_name, users.created_at, users.user_image
+                    profiles.id, profiles.profile_id
                 FROM 
-                    users
-                INNER JOIN 
-                    roles ON users.role_id = roles.id 
-                WHERE 
-                    users.id = %s 
+                    profiles
                 ORDER BY 
-                    users.id DESC
-            """, (user_id,))
-            user = cursor.fetchone()
+                    profiles.id DESC LIMIT 1
+            """)
+        user = cursor.fetchone()
         return user
+    
+    
+    
 
