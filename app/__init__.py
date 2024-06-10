@@ -9,7 +9,7 @@ def create_app():
     app = Flask(__name__)
     
     # Configure PostgreSQL
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@localhost/church_administrative_db_dev'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@localhost/cims_dev'
 
     # Initialize SQLAlchemy
     db.init_app(app)

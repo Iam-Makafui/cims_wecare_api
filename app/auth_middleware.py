@@ -2,8 +2,8 @@ from flask import jsonify, request
 from datetime import datetime
 from app.db import db  # Import the SQLAlchemy instance
 
-def check_token(token):
-    # token = request.headers.get('User-Token')
+def check_token():
+    token = request.headers.get('User-Token')
 
     if not token:
         return jsonify({'error': 'Unauthorized Request', 'status_code': 401}), 401
@@ -17,7 +17,7 @@ def check_token(token):
     connection.close()
 
     if not token_data:
-        return jsonify({'error': 'Invalid Authentication Token', 'token':token_data ,'status_code': 401}), 401
+        return jsonify({'error': 'Invalid Authentication Token', 'token':token ,'status_code': 401}), 401
 
     # Check token expiration
     expiration_date = token_data[2]  # Assuming expiration_date is the third column
@@ -30,6 +30,6 @@ def check_token(token):
 def register_middleware(app):
     @app.before_request
     def before_request():
-        result = check_token("sdkoskdomoewokokso23o2k3230jiwejiweji32")
+        result = check_token()
         if result:
             return result  # Return error response if authorization fails
