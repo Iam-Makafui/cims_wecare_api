@@ -1,6 +1,6 @@
 # CIMS WeCare API
 
-The Welfare Management System API is a comprehensive system designed to manage welfare activities efficiently. It provides a robust interface to handle user management, welfare payments, case management, reporting and analytics, chatbot integration, SMS notifications, and expense tracking.
+The CIMS WeCare API is a comprehensive system designed to manage welfare activities efficiently. It provides a robust interface to handle user management, welfare payments, case management, reporting and analytics, chatbot integration, SMS notifications, and expense tracking.
 
 ## Features
 
