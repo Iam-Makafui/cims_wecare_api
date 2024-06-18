@@ -23,7 +23,7 @@ The Welfare Management System API is a comprehensive system designed to manage w
 ### Prerequisites
 
     Python 3.x
-    MySQL
+    PostgresSQL
     
 ### Installation
 
