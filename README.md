@@ -1,4 +1,4 @@
-# Welfare Management System API
+# CIMS WeCare API
 
 The Welfare Management System API is a comprehensive system designed to manage welfare activities efficiently. It provides a robust interface to handle user management, welfare payments, case management, reporting and analytics, chatbot integration, SMS notifications, and expense tracking.
 
@@ -29,32 +29,22 @@ The Welfare Management System API is a comprehensive system designed to manage w
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/Iam-Makafui/welfare_management_software_api.git
-    cd welfare_management_software_api
+    git clone https://github.com/Iam-Makafui/cims_wecare_api.git
+    cd cims_wecare_api
     ```
 
-2. Create and activate a virtual environment:
-    ```bash
-    # Create a virtual environment (if not already created)
-    python -m venv myenv
-
-    # Activate the virtual environment
-    source myenv/bin/activate  # For Unix/Linux
-    .\myenv\Scripts\activate   # For Windows
-    ```
-
-3. Install dependencies:
+2. Install dependencies:
     ```bash
     pip install -r requirements.txt
     ```
 
-4. Database Setup:
-    - Create a MySQL database named `welfare_management_system_dev`.
+3. Database Setup:
+    - Create a Postgres database named `cims_dev`.
     - Configure the database connection in `__init__.py` in the app folder.
 
 ### Running the API
 
-Run the following command within the activated virtual environment and the root folder:
+Run the following command within the root folder:
 ```bash
 python run.py
 ```
