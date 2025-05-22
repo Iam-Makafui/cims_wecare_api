@@ -12,15 +12,19 @@ def get_users():
     for user in users:
         formatted_users.append({
             'id': user[0],
-            'firstname': user[1],
-            'lastname': user[2],
-            'username': user[3],
+            'profile_id': user[1],
+            'first_name': user[2],
+            'last_name': user[3],
             'email': user[4],
             'status': user[5],
             'role_id': user[6],
-            'role_name': user[7],
-            'created_at': user[8],
-            'user_image': user[9]
+            'cm_sys': user[7],
+            'cw_sys': user[8],
+            'ca_sys': user[9],
+            'w_sys': user[10],
+            'role_name': user[11],
+            'created_at': user[12],
+            'user_image': user[13]
         })
     
     return jsonify({'users': formatted_users})
@@ -128,12 +132,22 @@ def delete_user_by_id(user_id):
 def get_user_by_id(user_id):
     user = UsersController.get_user_by_id(user_id)
     if user:
-        return jsonify({'user': {'id': user[0], 'firstname': user[1], 'lastname': user[2], 'username': user[3], 'email': user[4], 'status': user[5], 'role_id': user[6], 'role_name': user[7], 'created_at': user[8], 'user_image': user[9]} })
+        return jsonify({'user': {'id': user[0], 'profile_id': user[1], 'first_name': user[2], 'last_name': user[3], 'email': user[4], 'status': user[5], 'role_id': user[6], 'cm_sys': user[7], 'cw_sys': user[8], 'ca_sys': user[9], 'w_sys': user[10], 'role_name': user[11], 'created_at': user[12], 'user_image': user[13]} })
     else:
-        return jsonify({'error': 'User not found', 'status_code': 404}), 404
+        return jsonify({'error': 'User not found', 'status_code': 404}), 200
+   
+   
+   
+# Route to fetch a specific user by username and password
+@users_blueprint.route('/users/<string:username>/<string:password>', methods=['GET'])
+def get_a_user_by_username_and_password(username, password):
+    user = UsersController.get_a_user_by_username_and_password(username, password)
+    if user:
+        return jsonify({'user': {'id': user[0], 'profile_id': user[1], 'first_name': user[2], 'last_name': user[3], 'email': user[4], 'status': user[5], 'role_id': user[6], 'cm_sys': user[7], 'cw_sys': user[8], 'ca_sys': user[9], 'w_sys': user[10], 'role_name': user[11], 'created_at': user[12], 'user_image': user[13]}, 'status_code': 200 })
+    else:
+        return jsonify({'error': 'User not found', 'status_code': 404}), 200
     
 
-    
 # Route to fetch last inserted profile
 @users_blueprint.route('/recent/profile', methods=['GET'])
 def get_last_inserted_profile():
@@ -142,3 +156,39 @@ def get_last_inserted_profile():
         return jsonify({'user': {'id': user[0], 'profile_id': user[1]}, 'status_code': 200}), 200
     else:
         return jsonify({'error': 'Profile table is empty', 'status_code': 404}), 404
+    
+    
+# New route to add an authorization code
+@users_blueprint.route('/authorization_code', methods=['POST'])
+def add_authorization_code():
+    required_fields = ['application_type', 'authorization_code']
+    data = request.json
+    missing_fields = [field for field in required_fields if field not in data]
+    if missing_fields:
+        error_message = f"Missing fields: {', '.join(missing_fields)}"
+        return jsonify({'error': error_message, 'status_code': 400}), 200
+    
+    
+    application_type = data['application_type']
+    authorization_code = data['authorization_code']
+    
+   
+    # Call controller method to add  an authorization code
+    new_auth_code = UsersController.add_authorization_code(application_type, authorization_code)
+    
+    if new_auth_code:
+        return jsonify({'message': 'Authorization code added successfully', 'authorization': new_auth_code, 'status_code': 200}), 200
+    else:
+        return jsonify({'error': 'Failed to add authorization code', 'status_code': 500}), 500
+   
+   
+   
+# Route to fetch an authorization code
+@users_blueprint.route('/authorization_code/<string:application_type>/<int:authorization_code>', methods=['GET'])
+def get_an_authorization_code(application_type, authorization_code):
+    auth_code = UsersController.get_an_authorization_code(application_type, authorization_code)
+    if auth_code:
+        return jsonify({'authorization_code': {'id': auth_code[0], 'application_type': auth_code[1], 'code': auth_code[2], 'inserted_at': auth_code[3], 'updated_at': auth_code[4]}, 'status_code': 200}), 200
+    else:
+        return jsonify({'error': 'Authorization code not found', 'status_code': 404}), 200
+    

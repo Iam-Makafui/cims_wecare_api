@@ -1,11 +1,16 @@
-from app.db import mysql  
+# from app.db import mysql
+from app.db import db  # Import the SQLAlchemy instance  
+
 
 class Role:
     # method to fetch all roles
     @staticmethod
     def get_all_roles():
-        cursor = mysql.connection.cursor()
-        cursor.execute("SELECT * FROM roles")
+        connection = db.engine.raw_connection()
+        cursor = connection.cursor()
+        cursor.execute("""
+                SELECT * FROM roles
+            """)
         roles = cursor.fetchall()
         cursor.close()
         return roles
