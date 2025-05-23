@@ -228,27 +228,147 @@ def get_last_inserted_profile():
         return jsonify({'error': 'Members table is empty', 'status_code': 404}), 404
     
 
-# def get_members():    
-#     members = MembersController.get_all_members()
+# Route to fetch all members
+@members_blueprint.route('/members', methods=['GET'])
+def get_members():    
+    members = MembersController.get_all_members()
     
-#     formatted_members = []
-#     for member in members:
-#         formatted_members.append({
-#             'id': member[0],
-#             'member_id': member[1],
-#             'name': member[2],
-#             'inserted_at': member[3],
-#             'updated_at': member[4]
-#         })
+    formatted_members = []
+    for member in members:
+        formatted_members.append({
+            'id': member[0],
+            'member_identification_id': member[1],
+            'member_image': member[2],
+            'prefix': member[3],
+            'first_name': member[4],
+            'last_name': member[5],
+            'other_names': member[6],
+            'gender': member[7],
+            'date_of_birth': member[8],
+            'place_of_birth': member[9],
+            'home_town': member[10],
+            'nationality': member[11],
+            'highest_level_of_education': member[12],
+            'institution_of_education': member[13],
+            'status_of_education': member[14],
+            'profession': member[15],
+            'employment_status': member[16],
+            'institution_of_employment': member[17],
+            'medical_conditions': member[18],
+            'mortality_status': member[19],
+            'marital_status': member[20],
+            'marriage_type': member[21],
+            'date_of_marriage': member[22],
+            'officiating_minister': member[23],
+            'place_of_marriage': member[24],
+            'marriage_license_number': member[25],
+            'fathers_name': member[26],
+            'fathers_phone_number': member[27],
+            'fathers_membership_status': member[28],
+            'fathers_mortality_status': member[29],
+            'mothers_name': member[30],
+            'mothers_phone_number': member[31],
+            'mothers_membership_status': member[32],
+            'mothers_mortality_status': member[33],
+            'spouse_name': member[34],
+            'spouse_phone': member[35],
+            'spouse_membership_status': member[36],
+            'spouse_mortality_status': member[37],
+            'child_name': member[38],
+            'child_phone_number': member[39],
+            'phone_number': member[40],
+            'email': member[41],
+            'residential_address': member[42],
+            'postal_address': member[43],
+            'place_of_residence': member[44],
+            'closest_landmark': member[45],
+            'department': member[46],
+            'areas_of_ministry': member[47],
+            'professional_service': member[48],
+            'member_status': member[49],
+            'water_baptism_date': member[50],
+            'place_of_baptism': member[51],
+            'officiating_minister': member[52],
+            'water_baptism_certificate_number': member[53],
+            'holy_spirit_baptism_status': member[54],
+            'member_since': member[55],
+            'transferred_from': member[56],
+            'special_note': member[57],
+            'inserted_at': member[58],
+            'updated_at': member[59]
+        })
     
-#     return jsonify({'members': formatted_members})
+    return jsonify({'members': formatted_members})
 
 
-# # Route to fetch a specific member by ID
-# @members_blueprint.route('/members/<int:member_id>', methods=['GET'])
-# def get_member_by_id(member_id):
-#     member = MembersController.get_member_by_id(member_id)
-#     if member:
-#         return jsonify({'member': {'id': member[0], 'member_id': member[1], 'name': member[2], 'inserted_at': member[3], 'updated_at': member[4]} })
-#     else:
-#         return jsonify({'error': 'Member not found', 'status_code': 404}), 404
+# Route to fetch a specific member by ID
+@members_blueprint.route('/members/<int:member_id>', methods=['GET'])
+def get_member_by_id(member_id):    
+    member = MembersController.get_member_by_id(member_id)
+
+    if member:
+            return jsonify({'member': {
+                'id': member[0],
+                'member_identification_id': member[1],
+                'member_image': member[2],
+                'prefix': member[3],
+                'first_name': member[4],
+                'last_name': member[5],
+                'other_names': member[6],
+                'gender': member[7],
+                'date_of_birth': member[8],
+                'place_of_birth': member[9],
+                'home_town': member[10],
+                'nationality': member[11],
+                'highest_level_of_education': member[12],
+                'institution_of_education': member[13],
+                'status_of_education': member[14],
+                'profession': member[15],
+                'employment_status': member[16],
+                'institution_of_employment': member[17],
+                'medical_conditions': member[18],
+                'mortality_status': member[19],
+                'marital_status': member[20],
+                'marriage_type': member[21],
+                'date_of_marriage': member[22],
+                'officiating_minister': member[23],
+                'place_of_marriage': member[24],
+                'marriage_license_number': member[25],
+                'fathers_name': member[26],
+                'fathers_phone_number': member[27],
+                'fathers_membership_status': member[28],
+                'fathers_mortality_status': member[29],
+                'mothers_name': member[30],
+                'mothers_phone_number': member[31],
+                'mothers_membership_status': member[32],
+                'mothers_mortality_status': member[33],
+                'spouse_name': member[34],
+                'spouse_phone': member[35],
+                'spouse_membership_status': member[36],
+                'spouse_mortality_status': member[37],
+                'child_name': member[38],
+                'child_phone_number': member[39],
+                'phone_number': member[40],
+                'email': member[41],
+                'residential_address': member[42],
+                'postal_address': member[43],
+                'place_of_residence': member[44],
+                'closest_landmark': member[45],
+                'department': member[46],
+                'areas_of_ministry': member[47],
+                'professional_service': member[48],
+                'member_status': member[49],
+                'water_baptism_date': member[50],
+                'place_of_baptism': member[51],
+                'officiating_minister': member[52],
+                'water_baptism_certificate_number': member[53],
+                'holy_spirit_baptism_status': member[54],
+                'member_since': member[55],
+                'transferred_from': member[56],
+                'special_note': member[57],
+                'inserted_at': member[58],
+                'updated_at': member[59]
+           }, 'status_code': 200  }), 200
+            
+    else:
+        return jsonify({'error': 'Member not found', 'status_code': 404}), 404

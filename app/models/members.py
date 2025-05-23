@@ -151,27 +151,72 @@ class Member:
         
 
 
-    #method to update member profile details
-
-
-
-    
     # method to fetch all members
-    # @staticmethod
-    # def get_all_members():
-    #     cursor = mysql.connection.cursor()
-    #     cursor.execute("SELECT * FROM members")
-    #     roles = cursor.fetchall()
-    #     cursor.close()
-    #     return roles
-    
-    
-    
+    @staticmethod
+    def get_all_members():
+        connection = db.engine.raw_connection()
+        cursor = connection.cursor()
+        cursor.execute("""
+                SELECT 
+                    members.id,
+                    members.member_identification_id, members_profile_detail.member_image, members_profile_detail.prefix, members_profile_detail.first_name, members_profile_detail.last_name, members_profile_detail.other_names,
+                    members_profile_detail.gender, members_profile_detail.date_of_birth, members_profile_detail.place_of_birth, members_profile_detail.home_town, members_profile_detail.nationality, members_profile_detail.highest_level_of_education,
+                    members_profile_detail.institution_of_education, members_profile_detail.status_of_education, members_profile_detail.profession, members_profile_detail.employment_status, members_profile_detail.institution_of_employment, members_profile_detail.medical_conditions, members_profile_detail.mortality_status,
+                    members_family_and_marriage_details.marital_status, members_family_and_marriage_details.marriage_type, members_family_and_marriage_details.date_of_marriage, members_family_and_marriage_details.officiating_minister, members_family_and_marriage_details.place_of_marriage, members_family_and_marriage_details.marriage_license_number,
+                    members_family_and_marriage_details.fathers_name, members_family_and_marriage_details.fathers_phone_number, members_family_and_marriage_details.fathers_membership_status, members_family_and_marriage_details.fathers_mortality_status,
+                    members_family_and_marriage_details.mothers_name, members_family_and_marriage_details.mothers_phone_number, members_family_and_marriage_details.mothers_membership_status, members_family_and_marriage_details.mothers_mortality_status,
+                    members_family_and_marriage_details.spouse_name, members_family_and_marriage_details.spouse_phone, members_family_and_marriage_details.spouse_membership_status, members_family_and_marriage_details.spouse_mortality_status,
+                    members_children_details.child_name, members_children_details.child_phone_number,
+                    members_contact_details.phone_number, members_contact_details.email, members_contact_details.residential_address, members_contact_details.postal_address, members_contact_details.place_of_residence, members_contact_details.closest_landmark,
+                    members_church_details.department, members_church_details.areas_of_ministry, members_church_details.professional_service, members_church_details.member_status, members_church_details.water_baptism_date, members_church_details.place_of_baptism, members_church_details.officiating_minister, members_church_details.water_baptism_certificate_number,
+                    members_church_details.holy_spirit_baptism_status, members_church_details.member_since, members_church_details.transferred_from,
+                    members_special_notes.special_note, members.inserted_at, members.updated_at
+                FROM 
+                    members
+                FULL OUTER JOIN members_profile_detail ON members.id = members_profile_detail.member_id
+                FULL OUTER JOIN members_family_and_marriage_details ON members.id = members_family_and_marriage_details.member_id
+                FULL OUTER JOIN members_children_details ON members.id = members_children_details.member_id
+                FULL OUTER JOIN members_contact_details ON members.id = members_contact_details.member_id
+                FULL OUTER JOIN members_church_details ON members.id = members_church_details.member_id
+                FULL OUTER JOIN members_special_notes ON members.id = members_special_notes.member_id
+                ORDER BY 
+                    members.id DESC
+            """)
+        members = cursor.fetchall()
+        return members
+
+
+
     # method to fetch a member
-    # @staticmethod
-    # def get_member_by_id(member_id):
-    #     cursor = mysql.connection.cursor()
-    #     cursor.execute("SELECT * FROM members WHERE id = %s", (member_id,))
-    #     role = cursor.fetchone()
-    #     cursor.close()
-    #     return role 
+    @staticmethod
+    def get_member_by_id(id):
+        connection = db.engine.raw_connection()
+        cursor = connection.cursor()
+        cursor.execute("""
+                SELECT 
+                    members.id,
+                    members.member_identification_id, members_profile_detail.member_image, members_profile_detail.prefix, members_profile_detail.first_name, members_profile_detail.last_name, members_profile_detail.other_names,
+                    members_profile_detail.gender, members_profile_detail.date_of_birth, members_profile_detail.place_of_birth, members_profile_detail.home_town, members_profile_detail.nationality, members_profile_detail.highest_level_of_education,
+                    members_profile_detail.institution_of_education, members_profile_detail.status_of_education, members_profile_detail.profession, members_profile_detail.employment_status, members_profile_detail.institution_of_employment, members_profile_detail.medical_conditions, members_profile_detail.mortality_status,
+                    members_family_and_marriage_details.marital_status, members_family_and_marriage_details.marriage_type, members_family_and_marriage_details.date_of_marriage, members_family_and_marriage_details.officiating_minister, members_family_and_marriage_details.place_of_marriage, members_family_and_marriage_details.marriage_license_number,
+                    members_family_and_marriage_details.fathers_name, members_family_and_marriage_details.fathers_phone_number, members_family_and_marriage_details.fathers_membership_status, members_family_and_marriage_details.fathers_mortality_status,
+                    members_family_and_marriage_details.mothers_name, members_family_and_marriage_details.mothers_phone_number, members_family_and_marriage_details.mothers_membership_status, members_family_and_marriage_details.mothers_mortality_status,
+                    members_family_and_marriage_details.spouse_name, members_family_and_marriage_details.spouse_phone, members_family_and_marriage_details.spouse_membership_status, members_family_and_marriage_details.spouse_mortality_status,
+                    members_children_details.child_name, members_children_details.child_phone_number,
+                    members_contact_details.phone_number, members_contact_details.email, members_contact_details.residential_address, members_contact_details.postal_address, members_contact_details.place_of_residence, members_contact_details.closest_landmark,
+                    members_church_details.department, members_church_details.areas_of_ministry, members_church_details.professional_service, members_church_details.member_status, members_church_details.water_baptism_date, members_church_details.place_of_baptism, members_church_details.officiating_minister, members_church_details.water_baptism_certificate_number,
+                    members_church_details.holy_spirit_baptism_status, members_church_details.member_since, members_church_details.transferred_from,
+                    members_special_notes.special_note, members.inserted_at, members.updated_at
+                FROM 
+                    members
+                FULL OUTER JOIN members_profile_detail ON members.id = members_profile_detail.member_id
+                FULL OUTER JOIN members_family_and_marriage_details ON members.id = members_family_and_marriage_details.member_id
+                FULL OUTER JOIN members_children_details ON members.id = members_children_details.member_id
+                FULL OUTER JOIN members_contact_details ON members.id = members_contact_details.member_id
+                FULL OUTER JOIN members_church_details ON members.id = members_church_details.member_id
+                FULL OUTER JOIN members_special_notes ON members.id = members_special_notes.member_id
+                WHERE
+                    members.id = %s
+            """, (id,))
+        member = cursor.fetchone()
+        return member
