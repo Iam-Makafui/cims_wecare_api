@@ -28,7 +28,7 @@ class PaymentAmount:
         cursor = connection.cursor()
         cursor.execute("""
                 SELECT 
-                    id, amount, currency
+                    id, amount, currency, inserted_at, updated_at
                 FROM 
                     payment_amounts
                 WHERE

@@ -76,3 +76,20 @@ def delete_payment_amount(payment_amount_id):
         return jsonify({'message': f'Payment Amount with ID {payment_amount_id} deleted successfully', 'status_code': 200}), 200
     else:
         return jsonify({'error': f'Failed to delete payment amount with ID {payment_amount_id}', 'status_code': 500}), 500
+
+# Route to fetch a specific payment amount by ID
+@paymentamount_blueprint.route('/paymentamounts/<int:payment_amount_id>', methods=['GET'])
+def get_a_payment_type(payment_amount_id):
+    payment_amount = PaymentAmountController.fetch_a_payment_amount(payment_amount_id)
+
+    if payment_amount:
+            return jsonify({'payment_amount': {
+                'id': payment_amount[0],
+                'amount': payment_amount[1],
+                'currency': payment_amount[2],
+                'inserted_at': payment_amount[3],
+                'updated_at': payment_amount[4]
+           }, 'status_code': 200  }), 200
+            
+    else:
+        return jsonify({'error': 'Payment amount not found', 'status_code': 404}), 404

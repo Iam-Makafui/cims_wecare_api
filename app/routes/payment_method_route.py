@@ -30,7 +30,7 @@ def add_payment_methods():
         error_message = f"Missing fields: {', '.join(missing_fields)}"
         return jsonify({'error': error_message, 'status_code': 400}), 200
     
-    paymentmethod = data['payment_method']
+    paymentmethod = data['method_name']
     
     # Call controller method to add payment method
     payment_method = PaymentMethodController.add_payment_method(paymentmethod)  
@@ -74,3 +74,21 @@ def delete_payment_method(payment_method_id):
         return jsonify({'message': f'Payment Method with ID {payment_method_id} deleted successfully', 'status_code': 200}), 200
     else:
         return jsonify({'error': f'Failed to delete payment method with ID {payment_method_id}', 'status_code': 500}), 500
+
+
+
+# Route to fetch a specific payment method by ID
+@paymentmethod_blueprint.route('/paymentmethods/<int:payment_method_id>', methods=['GET'])
+def get_a_payment_method(payment_method_id):
+    payment_method = PaymentMethodController.fetch_a_payment_method(payment_method_id)
+
+    if payment_method:
+            return jsonify({'payment_method': {
+                'id': payment_method[0],
+                'payment_method': payment_method[1],
+                'inserted_at': payment_method[2],
+                'updated_at': payment_method[3]
+           }, 'status_code': 200  }), 200
+            
+    else:
+        return jsonify({'error': 'Payment method not found', 'status_code': 404}), 404

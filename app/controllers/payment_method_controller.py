@@ -17,7 +17,7 @@ class PaymentMethodController:
     # New method to add a payment method
     @staticmethod
     def fetch_a_payment_method(id):
-        return PaymentMethod.fetch_a_payment_amount(id)
+        return PaymentMethod.fetch_a_payment_method(id)
     
     # New method to update a payment method
     @staticmethod

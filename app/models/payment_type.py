@@ -28,7 +28,7 @@ class PaymentType:
         cursor = connection.cursor()
         cursor.execute("""
                 SELECT 
-                    payment_type
+                    payment_type, inserted_at, updated_at
                 FROM 
                     payment_types
                 WHERE

@@ -28,7 +28,7 @@ class PaymentMethod:
         cursor = connection.cursor()
         cursor.execute("""
                 SELECT 
-                    id, method_name
+                    id, method_name, created_at, updated_at
                 FROM 
                     payment_methods
                 WHERE
