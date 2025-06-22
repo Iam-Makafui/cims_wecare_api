@@ -43,7 +43,7 @@ class PaymentAmount:
     def get_all_payment_amounts():
         connection = db.engine.raw_connection()
         cursor = connection.cursor()
-        cursor.execute("SELECT * FROM payment_amounts")
+        cursor.execute("SELECT * FROM payment_amounts ORDER BY inserted_at DESC")
         payment_amounts = cursor.fetchall()
         cursor.close()
         connection.close()
