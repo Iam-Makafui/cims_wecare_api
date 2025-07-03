@@ -5,8 +5,8 @@ class PaymentMethodController:
     
     # New method to add payment amount
     @staticmethod
-    def add_payment_method(payment_method):
-        return PaymentMethod.add_payment_method(payment_method)
+    def add_payment_method(payment_method, description):
+        return PaymentMethod.add_payment_method(payment_method, description)
 
     
     # New method to fetch all payment methods
@@ -21,8 +21,8 @@ class PaymentMethodController:
     
     # New method to update a payment method
     @staticmethod
-    def update_payment_method(id, payment_method):
-        return PaymentMethod.update_payment_method(id, payment_method)
+    def update_payment_method(id, payment_method, description):
+        return PaymentMethod.update_payment_method(id, payment_method, description)
     
     # New method to delete a payment method
     @staticmethod

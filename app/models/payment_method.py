@@ -5,17 +5,17 @@ from app.db import db  # Import the SQLAlchemy instance
 class PaymentMethod:
     # method for adding a payment method detail
     @staticmethod
-    def add_payment_method(payment_method):
+    def add_payment_method(payment_method, description):
         try:
             connection = db.engine.raw_connection()
             cursor = connection.cursor()
             cursor.execute(
-                "INSERT INTO payment_methods (method_name) VALUES (%s)",
-                (payment_method,)
+                "INSERT INTO payment_methods (method_name, description) VALUES (%s, %s)",
+                (payment_method, description,)
             )
             connection.commit()  # Commit changes to the database
             cursor.close()
-            return {'payment_method': payment_method}
+            return {'payment_method': payment_method, 'description': description}
         except Exception as e:
             print(e)
             return None
@@ -28,7 +28,7 @@ class PaymentMethod:
         cursor = connection.cursor()
         cursor.execute("""
                 SELECT 
-                    id, method_name, created_at, updated_at
+                    id, method_name, description, created_at, updated_at
                 FROM 
                     payment_methods
                 WHERE
@@ -51,15 +51,15 @@ class PaymentMethod:
     
     # method to update a payment method
     @staticmethod
-    def update_payment_method(id, payment_method):
+    def update_payment_method(id, payment_method, description):
         try:
             connection = db.engine.raw_connection()
             cursor = connection.cursor()
             cursor.execute("""
                 UPDATE payment_methods
-                SET method_name = %s  
+                SET method_name = %s, description = %s  
                 WHERE id = %s
-            """, (payment_method, id,))
+            """, (payment_method, description, id,))
             connection.commit()
             cursor.close()
             connection.close()

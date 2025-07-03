@@ -14,7 +14,8 @@ def get_all_payment_methods():
             'id': paymentmethod[0],
             'method_name': paymentmethod[1],
             'inserted_at': paymentmethod[2],
-            'updated_at': paymentmethod[3]
+            'updated_at': paymentmethod[3],
+            'description': paymentmethod[4]
         })
     
     return jsonify({'paymentmethods': formatted_paymentmethods})
@@ -23,7 +24,7 @@ def get_all_payment_methods():
 # New route to add a payment methods
 @paymentmethod_blueprint.route('/paymentmethods', methods=['POST'])
 def add_payment_methods():
-    required_fields = ['method_name']
+    required_fields = ['method_name', 'description']
     data = request.json
     missing_fields = [field for field in required_fields if field not in data]
     if missing_fields:
@@ -31,9 +32,10 @@ def add_payment_methods():
         return jsonify({'error': error_message, 'status_code': 400}), 200
     
     paymentmethod = data['method_name']
+    description = data['description']
     
     # Call controller method to add payment method
-    payment_method = PaymentMethodController.add_payment_method(paymentmethod)  
+    payment_method = PaymentMethodController.add_payment_method(paymentmethod, description)  
 
     if payment_method:
         return jsonify({'message': 'Payment Method added successfully', 'payment_method': payment_method, 'status_code': 200}), 200
@@ -45,7 +47,7 @@ def add_payment_methods():
 # New route to update a payment methods
 @paymentmethod_blueprint.route('/paymentmethods', methods=['PATCH'])
 def update_payment_method():
-    required_fields = ['id', 'payment_method']
+    required_fields = ['id', 'method_name', 'description']
     data = request.json
     missing_fields = [field for field in required_fields if field not in data]
     if missing_fields:
@@ -53,11 +55,12 @@ def update_payment_method():
         return jsonify({'error': error_message, 'status_code': 400}), 400
     
     id = data['id']
-    payment_method = data['payment_method']
+    payment_method = data['method_name']
+    description = data['description']
 
     
     # Call controller method to update payment method detail
-    update_paymentmethod = PaymentMethodController.update_payment_method(id, payment_method)
+    update_paymentmethod = PaymentMethodController.update_payment_method(id, payment_method, description)
     
     if update_paymentmethod:
         return jsonify({'message': 'Payment Amount Updated Successfully', 'payment_method': update_paymentmethod, 'status_code': 200}), 200
@@ -86,8 +89,9 @@ def get_a_payment_method(payment_method_id):
             return jsonify({'payment_method': {
                 'id': payment_method[0],
                 'payment_method': payment_method[1],
-                'inserted_at': payment_method[2],
-                'updated_at': payment_method[3]
+                'description': payment_method[2],
+                'inserted_at': payment_method[3],
+                'updated_at': payment_method[4]
            }, 'status_code': 200  }), 200
             
     else:

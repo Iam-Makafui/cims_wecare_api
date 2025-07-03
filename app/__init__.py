@@ -9,8 +9,8 @@ from app.routes.payment_amount_route import paymentamount_blueprint
 from app.routes.payment_method_route import paymentmethod_blueprint
 from app.routes.case_category_route import case_category_blueprint
 from app.routes.cases_route import case_blueprint
+from app.routes.query_route import query_blueprint  # Add new query blueprint
 from app.auth_middleware import register_middleware
-# from app.db import mysql  # Import the MySQL instance
 from app.db import db  # Import the SQLAlchemy instance
 
 def create_app():
@@ -22,6 +22,7 @@ def create_app():
     # Initialize SQLAlchemy
     db.init_app(app)
 
+    # Register blueprints
     app.register_blueprint(users_blueprint)
     app.register_blueprint(roles_blueprint)
     app.register_blueprint(files_blueprint)
@@ -32,6 +33,7 @@ def create_app():
     app.register_blueprint(paymentmethod_blueprint)
     app.register_blueprint(case_category_blueprint)
     app.register_blueprint(case_blueprint)
+    app.register_blueprint(query_blueprint)  # Register query blueprint
     
     register_middleware(app)
 

@@ -13,8 +13,9 @@ def get_all_payment_types():
         formatted_paymenttypes.append({
             'id': paymenttype[0],
             'payment_type': paymenttype[1],
-            'inserted_at': paymenttype[2],
-            'updated_at': paymenttype[3]
+            'inserted_at': paymenttype[2],  
+            'updated_at': paymenttype[3],
+            'description': paymenttype[4]
         })
     
     return jsonify({'payment_types': formatted_paymenttypes})
@@ -23,7 +24,7 @@ def get_all_payment_types():
 # New route to add a payment type
 @paymenttypes_blueprint.route('/paymenttypes', methods=['POST'])
 def add_payment_type():
-    required_fields = ['payment_type']
+    required_fields = ['payment_type', 'description']
     data = request.json
     missing_fields = [field for field in required_fields if field not in data]
     if missing_fields:
@@ -31,9 +32,10 @@ def add_payment_type():
         return jsonify({'error': error_message, 'status_code': 400}), 200
     
     payment_type = data['payment_type']
+    description = data['description']
 
     # Call controller method to add payment type
-    payment_type = PaymentTypeController.add_payment_type(payment_type)
+    payment_type = PaymentTypeController.add_payment_type(payment_type, description)
     
     if payment_type:
         return jsonify({'message': 'Payment Type added successfully', 'payment_type': payment_type, 'status_code': 200}), 200
@@ -45,7 +47,7 @@ def add_payment_type():
 # New route to update a payment type detail
 @paymenttypes_blueprint.route('/paymenttypes', methods=['PATCH'])
 def update_payment_type():
-    required_fields = ['id', 'payment_type']
+    required_fields = ['id', 'payment_type', 'description']
     data = request.json
     missing_fields = [field for field in required_fields if field not in data]
     if missing_fields:
@@ -54,9 +56,10 @@ def update_payment_type():
     
     id = data['id']
     payment_type = data['payment_type']
+    description = data['description']
     
     # Call controller method to update payment type detail
-    update_payment_type = PaymentTypeController.update_payment_type(id, payment_type)
+    update_payment_type = PaymentTypeController.update_payment_type(id, payment_type, description)
     
     if update_payment_type:
         return jsonify({'message': 'Payment Detail Updated Successfully', 'payment_type': update_payment_type, 'status_code': 200}), 200
