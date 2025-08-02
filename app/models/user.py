@@ -9,7 +9,7 @@ class User:
         cursor = connection.cursor()
         cursor.execute("""
                 SELECT 
-                    profiles.id, profiles.profile_id, profiles.first_name, profiles.last_name, profiles.email, profiles.profile_status, profiles.profile_type, profiles.cm_sys, profiles.cw_sys, profiles.ca_sys, profiles.w_sys, roles.role, profiles.inserted_at, profiles.profile_image
+                    profiles.id, profiles.profile_id, profiles.first_name, profiles.last_name, profiles.email, profiles.profile_status, profiles.profile_type, profiles.cm_sys, profiles.cw_sys, profiles.ca_sys, profiles.w_sys, roles.role, profiles.inserted_at, profiles.profile_image, profiles.phone_number
                 FROM 
                     profiles 
                 INNER JOIN 
@@ -92,7 +92,7 @@ class User:
         with connection.cursor() as cursor:
             cursor.execute("""
                 SELECT 
-                    profiles.id, profiles.profile_id, profiles.first_name, profiles.last_name, profiles.email, profiles.profile_status, profiles.profile_type, profiles.cm_sys, profiles.cw_sys, profiles.ca_sys, profiles.w_sys, roles.role, profiles.inserted_at, profiles.profile_image
+                    profiles.id, profiles.profile_id, profiles.first_name, profiles.last_name, profiles.email, profiles.profile_status, profiles.profile_type, profiles.cm_sys, profiles.cw_sys, profiles.ca_sys, profiles.w_sys, roles.role, profiles.inserted_at, profiles.profile_image, profiles.phone_number
                 FROM 
                     profiles 
                 INNER JOIN 
@@ -113,7 +113,7 @@ class User:
         with connection.cursor() as cursor:
             cursor.execute("""
                 SELECT 
-                    profiles.id, profiles.profile_id, profiles.first_name, profiles.last_name, profiles.email, profiles.profile_status, profiles.profile_type, profiles.cm_sys, profiles.cw_sys, profiles.ca_sys, profiles.w_sys, roles.role, profiles.inserted_at, profiles.profile_image
+                    profiles.id, profiles.profile_id, profiles.first_name, profiles.last_name, profiles.email, profiles.profile_status, profiles.profile_type, profiles.cm_sys, profiles.cw_sys, profiles.ca_sys, profiles.w_sys, roles.role, profiles.inserted_at, profiles.profile_image, profiles.phone_number
                 FROM 
                     profiles 
                 INNER JOIN 

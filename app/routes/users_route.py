@@ -24,7 +24,8 @@ def get_users():
             'w_sys': user[10],
             'role_name': user[11],
             'created_at': user[12],
-            'user_image': user[13]
+            'user_image': user[13],
+            'phone_number': user[14]
         })
     
     return jsonify({'users': formatted_users})
@@ -132,7 +133,7 @@ def delete_user_by_id(user_id):
 def get_user_by_id(user_id):
     user = UsersController.get_user_by_id(user_id)
     if user:
-        return jsonify({'user': {'id': user[0], 'profile_id': user[1], 'first_name': user[2], 'last_name': user[3], 'email': user[4], 'status': user[5], 'role_id': user[6], 'cm_sys': user[7], 'cw_sys': user[8], 'ca_sys': user[9], 'w_sys': user[10], 'role_name': user[11], 'created_at': user[12], 'user_image': user[13]} })
+        return jsonify({'user': {'id': user[0], 'profile_id': user[1], 'first_name': user[2], 'last_name': user[3], 'email': user[4], 'status': user[5], 'role_id': user[6], 'cm_sys': user[7], 'cw_sys': user[8], 'ca_sys': user[9], 'w_sys': user[10], 'role_name': user[11], 'created_at': user[12], 'user_image': user[13], 'phone_number': user[14]} })
     else:
         return jsonify({'error': 'User not found', 'status_code': 404}), 200
    
@@ -143,7 +144,7 @@ def get_user_by_id(user_id):
 def get_a_user_by_username_and_password(username, password):
     user = UsersController.get_a_user_by_username_and_password(username, password)
     if user:
-        return jsonify({'user': {'id': user[0], 'profile_id': user[1], 'first_name': user[2], 'last_name': user[3], 'email': user[4], 'status': user[5], 'role_id': user[6], 'cm_sys': user[7], 'cw_sys': user[8], 'ca_sys': user[9], 'w_sys': user[10], 'role_name': user[11], 'created_at': user[12], 'user_image': user[13]}, 'status_code': 200 })
+        return jsonify({'user': {'id': user[0], 'profile_id': user[1], 'first_name': user[2], 'last_name': user[3], 'email': user[4], 'status': user[5], 'role_id': user[6], 'cm_sys': user[7], 'cw_sys': user[8], 'ca_sys': user[9], 'w_sys': user[10], 'role_name': user[11], 'created_at': user[12], 'user_image': user[13], 'phone_number': user[14]}, 'status_code': 200 })
     else:
         return jsonify({'error': 'User not found', 'status_code': 404}), 200
     
@@ -155,7 +156,7 @@ def get_last_inserted_profile():
     if user:
         return jsonify({'user': {'id': user[0], 'profile_id': user[1]}, 'status_code': 200}), 200
     else:
-        return jsonify({'error': 'Profile table is empty', 'status_code': 404}), 404
+        return jsonify({'error': 'Profile table is empty', 'status_code': 404}), 200
     
     
 # New route to add an authorization code
