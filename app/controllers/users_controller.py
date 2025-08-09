@@ -64,3 +64,10 @@ class UsersController:
     @staticmethod
     def get_an_authorization_code(application_type, authorization_code):
         return User.get_an_authorization_code(application_type, authorization_code)
+    
+    
+    
+    # method for updating user status
+    @staticmethod
+    def update_user_status(user_id, new_status):
+        return User.update_user_status(user_id, new_status)

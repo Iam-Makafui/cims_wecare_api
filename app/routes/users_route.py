@@ -192,4 +192,14 @@ def get_an_authorization_code(application_type, authorization_code):
         return jsonify({'authorization_code': {'id': auth_code[0], 'application_type': auth_code[1], 'code': auth_code[2], 'inserted_at': auth_code[3], 'updated_at': auth_code[4]}, 'status_code': 200}), 200
     else:
         return jsonify({'error': 'Authorization code not found', 'status_code': 404}), 200
+
+
+# Route for updating user status
+@users_blueprint.route('/users/<int:user_id>/<string:status>', methods=['PATCH'])
+def update_user_status(user_id, status):
     
+    result = UsersController.update_user_status(user_id, status)
+    if result:
+        return jsonify({'message': 'User status updated successfully', 'status_code': 200}), 200
+    else:
+        return jsonify({'error': 'Failed to update user status', 'status_code': 500}), 500

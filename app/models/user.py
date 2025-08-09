@@ -76,7 +76,7 @@ class User:
         try:
             connection = db.engine.raw_connection()
             cursor = connection.cursor()
-            cursor.execute("DELETE FROM users WHERE id = %s", (user_id,))
+            cursor.execute("DELETE FROM profiles WHERE id = %s", (user_id,))
             connection.commit()  # Commit changes to the database
             cursor.close()
             return {'user_id': user_id}
@@ -180,6 +180,20 @@ class User:
             user = cursor.fetchone()
         return user
     
-    
-    
-
+    # method for updating user status
+    @staticmethod
+    def update_user_status(user_id, new_status):
+        try:
+            connection = db.engine.raw_connection()
+            cursor = connection.cursor()
+            cursor.execute("""
+                UPDATE profiles
+                SET profile_status = %s
+                WHERE id = %s
+            """, (new_status, user_id,))
+            connection.commit()
+            cursor.close()
+            return {'user_id': user_id, 'new_status': new_status}
+        except Exception as e:
+            print(e)  # Handle the exception according to your application's error handling
+            return None
