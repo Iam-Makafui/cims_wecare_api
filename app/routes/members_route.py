@@ -225,7 +225,7 @@ def get_last_inserted_profile():
     if member:
         return jsonify({'member': {'id': member[0], 'member_identification_id': member[1]}, 'status_code': 200}), 200
     else:
-        return jsonify({'error': 'Members table is empty', 'status_code': 404}), 404
+        return jsonify({'error': 'Members table is empty', 'status_code': 404}), 200
     
 
 # Route to fetch all members
