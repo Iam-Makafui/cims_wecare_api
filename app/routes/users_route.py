@@ -68,7 +68,7 @@ def add_user():
 # New route to update a user profile details
 @users_blueprint.route('/users/profile', methods=['PATCH'])
 def update_user():
-    required_fields = ['first_name', 'last_name', 'username', 'user_id', 'email', 'status', 'role_id', 'user_image']
+    required_fields = ['first_name', 'last_name', 'user_image', 'status', 'role_id', 'email', 'phone_number', 'user_id']
     data = request.json
     missing_fields = [field for field in required_fields if field not in data]
     if missing_fields:
@@ -77,7 +77,7 @@ def update_user():
     
     first_name = data['first_name']
     last_name = data['last_name']
-    username = data['username']
+    phone_number = data['phone_number']
     user_id = data['user_id']
     email = data['email']
     status = data['status']
@@ -85,7 +85,7 @@ def update_user():
     user_image = data['user_image']
 
     # Call controller method to update user profile details
-    update_user = UsersController.update_user(user_id, first_name, last_name, username, email, status, role_id, user_image)
+    update_user = UsersController.update_user(user_id, first_name, last_name, user_image, status, role_id, email, phone_number)
     
     if update_user:
         return jsonify({'message': 'User Profile Updated Successfully', 'user': update_user, 'status_code': 200}), 200
@@ -203,3 +203,23 @@ def update_user_status(user_id, status):
         return jsonify({'message': 'User status updated successfully', 'status_code': 200}), 200
     else:
         return jsonify({'error': 'Failed to update user status', 'status_code': 500}), 500
+   
+    
+# Route for updating user user image
+@users_blueprint.route('/users/user_image/<int:user_id>', methods=['PATCH'])
+def update_user_image(user_id):
+    
+    required_fields = ['user_image']
+    data = request.json
+    missing_fields = [field for field in required_fields if field not in data]
+    if missing_fields:
+        error_message = f"Missing fields: {', '.join(missing_fields)}"
+        return jsonify({'error': error_message, 'status_code': 400}), 200
+    
+    user_image = data['user_image']
+    
+    result = UsersController.update_user_image(user_id, user_image)
+    if result:
+        return jsonify({'message': 'User image updated successfully', 'status_code': 200}), 200
+    else:
+        return jsonify({'error': 'Failed to update user image', 'status_code': 500}), 500

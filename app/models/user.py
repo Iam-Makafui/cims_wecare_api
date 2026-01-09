@@ -40,15 +40,15 @@ class User:
         
     # method to update a user profile details
     @staticmethod
-    def update_user(user_id, firstname, lastname, username, email, status, role_id, user_image):
+    def update_user(user_id, firstname, lastname, user_image, status, role_id, email, phone_number):
         try:
             connection = db.engine.raw_connection()
             cursor = connection.cursor()
-            cursor.execute("UPDATE users SET firstname = %s, lastname = %s, username = %s, email = %s, status = %s, role_id = %s, user_image = %s WHERE id = %s", 
-                           (firstname, lastname, username, email, status, role_id, user_image, user_id,))
+            cursor.execute("UPDATE profiles SET first_name = %s, last_name = %s, profile_image = %s, profile_status = %s, profile_type = %s, email = %s, phone_number = %s WHERE id = %s", 
+                           (firstname, lastname, user_image, status, role_id, email, phone_number, user_id,))
             connection.commit()
             cursor.close()
-            return {'first_name': firstname, 'last_name': lastname, 'username': username, 'email': email, 'status': status, 'user_image': user_image}
+            return {'first_name': firstname, 'last_name': lastname, 'user_image': user_image, 'status': status, 'email': email, 'phone_number': phone_number}
         except Exception as e:
             print(e)  # Handle the exception according to your application's error handling
             return None
@@ -60,7 +60,7 @@ class User:
         try:
             connection = db.engine.raw_connection()
             cursor = connection.cursor()
-            cursor.execute("UPDATE users SET password = %s WHERE id = %s", 
+            cursor.execute("UPDATE profiles SET password = %s WHERE id = %s", 
                            (password, user_id,))
             connection.commit()  # Commit changes to the database
             cursor.close()
@@ -194,6 +194,25 @@ class User:
             connection.commit()
             cursor.close()
             return {'user_id': user_id, 'new_status': new_status}
+        except Exception as e:
+            print(e)  # Handle the exception according to your application's error handling
+            return None
+    
+    
+    # method for updating user image
+    @staticmethod
+    def update_user_image(user_id, user_image):
+        try:
+            connection = db.engine.raw_connection()
+            cursor = connection.cursor()
+            cursor.execute("""
+                UPDATE profiles
+                SET profile_image = %s
+                WHERE id = %s
+            """, (user_image, user_id,))
+            connection.commit()
+            cursor.close()
+            return {'user_id': user_id, 'user_image': user_image}
         except Exception as e:
             print(e)  # Handle the exception according to your application's error handling
             return None

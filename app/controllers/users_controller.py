@@ -20,8 +20,8 @@ class UsersController:
     
     # New method to update a user
     @staticmethod
-    def update_user(user_id, firstname, lastname, username, email, status, role_id, user_image):
-        return User.update_user(user_id, firstname, lastname, username, email, status, role_id, user_image)
+    def update_user(user_id, firstname, lastname, user_image, status, role_id, email, phone_number):
+        return User.update_user(user_id, firstname, lastname, user_image, status, role_id, email, phone_number)
     
     
     # New method to update a user account
@@ -71,3 +71,8 @@ class UsersController:
     @staticmethod
     def update_user_status(user_id, new_status):
         return User.update_user_status(user_id, new_status)
+    
+    # method for updating user image
+    @staticmethod
+    def update_user_image(user_id, user_image):
+        return User.update_user_image(user_id, user_image)
